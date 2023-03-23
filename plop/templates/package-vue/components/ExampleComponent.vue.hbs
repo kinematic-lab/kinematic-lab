@@ -1,0 +1,14 @@
+<template>
+	<div class='c-example-component'>
+		{{ props.message }}
+	</div>
+</template>
+
+<script setup>
+const props = defineProps({
+	message: {
+		type: String,
+		default: 'Hello World!',
+	},
+});
+</script>

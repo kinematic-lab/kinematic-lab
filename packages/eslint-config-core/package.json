@@ -1,0 +1,18 @@
+{
+	"name": "eslint-config-core",
+	"version": "0.0.0",
+	"main": "main.cjs",
+	"private": true,
+	"dependencies": {
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/preset-env": "^7.19.1",
+		"eslint": "^8.27.0",
+		"eslint-config-turbo": "latest",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-nuxt": "^4.0.0",
+		"eslint-plugin-vue": "^7.20.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

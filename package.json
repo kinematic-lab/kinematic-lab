@@ -1,0 +1,41 @@
+{
+	"name": "frontend",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "pnpm run turbo:build",
+		"dev": "pnpm run turbo:dev",
+		"lint": "prettier --write --list-different . && eslint --ext \".js,.vue\" . && pnpm run turbo:lint",
+		"test": "pnpm run turbo:test",
+		"turbo:build": "turbo run build",
+		"turbo:dev": "turbo run dev --parallel",
+		"turbo:lint": "turbo run lint",
+		"turbo:test": "turbo run test",
+		"prepare": "husky install",
+		"new": "pnpm plop && pnpm install && pnpm run lint"
+	},
+	"packageManager": "pnpm@7.15.0",
+	"engines": {
+		"node": ">=v16.15.0"
+	},
+	"devDependencies": {
+		"@commitlint/config-conventional": "^17.4.4",
+		"@typescript-eslint/eslint-plugin": "^5.56.0",
+		"@typescript-eslint/parser": "^5.56.0",
+		"commitlint": "^17.4.4",
+		"eslint": "^8.27.0",
+		"eslint-config-core": "workspace:*",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-vue": "^7.20.0",
+		"husky": "^8.0.2",
+		"lint-staged": "^13.2.0",
+		"plop": "^3.1.1",
+		"prettier": "^2.7.1",
+		"turbo": "latest",
+		"typescript": "^5.0.2"
+	}
+}

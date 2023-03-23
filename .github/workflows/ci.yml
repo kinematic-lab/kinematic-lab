@@ -1,0 +1,32 @@
+name: Frontend / Build & Deploy
+
+on:
+    push:
+        branches: ['dev', 'main']
+    pull_request:
+        branches: ['dev', 'main']
+
+jobs:
+    QualityAssuarance:
+        runs-on: ubuntu-20.04
+        strategy:
+            matrix:
+                node-version: [18]
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 7
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'pnpm'
+            - name: Install dependencies
+              run: pnpm install
+            - name: Linting
+              run: pnpm run lint
+            - name: Testing
+              run: pnpm run test
+            - name: Build
+              run: pnpm run build

@@ -1,0 +1,9 @@
+!*.*.js
+node_modules
+.nuxt
+.output
+.turbo
+dist
+static
+sw.js
+*.min.js
