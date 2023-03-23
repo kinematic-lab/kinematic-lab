@@ -7,7 +7,7 @@ on:
         branches: ['dev', 'main']
 
 jobs:
-    QualityAssuarance:
+    CICD:
         runs-on: ubuntu-20.04
         strategy:
             matrix:
