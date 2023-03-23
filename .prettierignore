@@ -4,11 +4,3 @@
 dist
 static
 plop
-
-./apps/**/.nuxt
-./apps/**/dist
-./apps/**/static
-
-./packages/**/.nuxt
-./packages/**/dist
-./packages/**/static

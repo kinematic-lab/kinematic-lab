@@ -13,7 +13,7 @@ module.exports = function global(root_dir, plop_dir) {
 				type: 'list',
 				name: 'type',
 				message: 'Select package type',
-				choices: ['vue', 'ts'],
+				choices: ['typescript'],
 			},
 		],
 
@@ -25,8 +25,14 @@ module.exports = function global(root_dir, plop_dir) {
 
 				templateFiles: [
 					`${plop_dir}/templates/package-{{ type }}/**.hbs`,
+					`${plop_dir}/templates/package-{{ type }}/src/**.hbs`,
+					`${plop_dir}/templates/package-{{ type }}/types/common/**.hbs`,
 					`${plop_dir}/templates/package-{{ type }}/components/**.hbs`,
 				],
+
+				globOptions: {
+					dot: true,
+				}
 			},
 		],
 	};

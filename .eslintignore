@@ -1,9 +1,9 @@
-!*.*.js
 node_modules
 .nuxt
 .output
 .turbo
 dist
 static
+plop/templates
 sw.js
 *.min.js

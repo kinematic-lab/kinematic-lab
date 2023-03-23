@@ -1,7 +1,15 @@
 module.exports = {
-	extends: ['eslint:recommended', 'prettier'],
-	plugins: ['vue'],
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:vue/vue3-recommended',
+		'plugin:nuxt/recommended',
+		'prettier',
+	],
+	plugins: ['vue', '@typescript-eslint'],
+	parser: 'vue-eslint-parser',
 	parserOptions: {
+		parser: '@typescript-eslint/parser',
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},

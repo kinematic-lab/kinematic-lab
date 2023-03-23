@@ -1,19 +1,24 @@
 {
-	"name": "{{ dashCase name }}",
+	"name": "{{dashCase name}}",
 	"private": true,
 	"version": "0.0.0",
+	"nuxt": {
+		"port": 3000
+	},
 	"scripts": {
-		"dev": "pnpx nuxi dev",
-		"build": "pnpx nuxi build",
-		"start": "pnpx nuxi start",
+		"dev": "nuxt dev",
+		"build": "nuxt build",
+		"start": "nuxt start",
 		"postinstall": "nuxt prepare",
-		"lint": "prettier --write --list-different . && eslint --ext \".js,.vue\" . --fix"
+		"lint": "prettier --write --list-different . && eslint --ext \".js,.ts,.vue\" . --fix"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.19.1",
-		"nuxt": "^3.3.1"
+		"eslint": "^8.36.0",
+		"eslint-config-core": "workspace:*",
+		"prettier": "^2.7.1"
 	},
 	"dependencies": {
-		"@nuxt/kit": "^3.3.1"
+		"@nuxt/kit": "^3.3.1",
+		"nuxt": "^3.3.1"
 	}
 }

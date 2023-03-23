@@ -1,0 +1,16 @@
+{
+	"name": "{{dashCase name}}",
+	"version": "0.0.0",
+	"main": "./src/index.ts",
+	"private": true,
+	"scripts": {
+		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-config-core": "workspace:*",
+		"tsconfig": "workspace:*",
+		"typescript": "^4.5.2",
+		"prettier": "^2.7.1"
+	}
+}

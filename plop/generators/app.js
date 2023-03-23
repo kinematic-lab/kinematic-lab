@@ -15,6 +15,13 @@ module.exports = function global(root_dir, plop_dir) {
 				message: 'Select app type',
 				choices: ['nuxt'],
 			},
+
+			{
+				type: 'input',
+				name: 'port',
+				message: 'Specify port',
+				default: '3000',
+			},
 		],
 
 		actions: [
@@ -36,6 +43,10 @@ module.exports = function global(root_dir, plop_dir) {
 					// `${plop_dir}/templates/app-{{ type }}/static/**.hbs`,
 					// `${plop_dir}/templates/app-{{ type }}/store/**.hbs`,
 				],
+
+				globOptions: {
+					dot: true,
+				}
 			},
 		],
 	};
