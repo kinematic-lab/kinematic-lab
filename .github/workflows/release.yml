@@ -35,5 +35,8 @@ jobs:
 
             - name: Create Release Pull Request
               uses: changesets/action@v1
+              width:
+                  title: 'chore: package release(s)'
+                  commit: 'chore: package release(s)'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
