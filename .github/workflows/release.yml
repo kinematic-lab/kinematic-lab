@@ -7,6 +7,9 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+env:
+    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
 jobs:
     release:
         name: Release
@@ -45,4 +48,3 @@ jobs:
                   version: pnpm run changeset:version
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
