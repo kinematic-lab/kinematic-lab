@@ -1,5 +1,5 @@
 {
-	"name": "frontend",
+	"name": "turbo-boilerplate",
 	"version": "0.0.0",
 	"private": true,
 	"workspaces": [
@@ -17,21 +17,20 @@
 		"turbo:test": "turbo run test",
 		"prepare": "husky install",
 		"new": "pnpm plop && pnpm install && pnpm run lint",
-		"changeset": "npx changeset",
-		"release": "npx changeset publish"
+		"release": "turbo run build lint test && changeset version && changeset publish"
 	},
 	"packageManager": "pnpm@7.15.0",
 	"engines": {
 		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
+		"@kinematic-lab/eslint-config": "^0.0.4",
 		"@changesets/cli": "^2.26.1",
 		"@commitlint/config-conventional": "^17.4.4",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
 		"@typescript-eslint/parser": "^5.56.0",
 		"commitlint": "^17.4.4",
 		"eslint": "^8.36.0",
-		"eslint-config-core": "workspace:*",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-vue": "^7.20.0",
 		"husky": "^8.0.2",

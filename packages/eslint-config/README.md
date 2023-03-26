@@ -3,7 +3,7 @@
 **Installation:**
 
 ```bash
-pnpm i @kinematic-lab/eslint-config-core -D
+pnpm i @kinematic-lab/eslint-config -D
 ```
 
 <br />
@@ -12,6 +12,6 @@ pnpm i @kinematic-lab/eslint-config-core -D
 
 ```javascript
 {
-	"extends": "@kinematic-lab/eslint-config-core"
+	"extends": "@kinematic-lab"
 }
 ```

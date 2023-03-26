@@ -1,4 +1,10 @@
-# tsconfig
+# eslint-config
+
+## 0.0.4
+
+### Patch Changes
+
+-   Minor refactor.
 
 ## 0.0.3
 

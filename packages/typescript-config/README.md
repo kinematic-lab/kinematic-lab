@@ -3,7 +3,7 @@
 **Installation:**
 
 ```bash
-$ pnpm i @kinematic-lab/tsconfig -D
+$ pnpm i @kinematic-lab/typescript-config -D
 ```
 
 <br />
@@ -12,6 +12,6 @@ $ pnpm i @kinematic-lab/tsconfig -D
 
 ```javascript
 {
-	"extends": "@kinematic-lab/tsconfig/base.json",
+	"extends": "@kinematic-lab/typescript-config/base.json",
 }
 ```

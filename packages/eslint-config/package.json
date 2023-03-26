@@ -1,0 +1,19 @@
+{
+	"name": "@kinematic-lab/eslint-config",
+	"version": "0.0.4",
+	"main": "src/index.js",
+	"private": true,
+	"scripts": {
+		"build": "tsup src/index.js --format cjs"
+	},
+	"devDependencies": {
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/preset-env": "^7.19.1",
+		"eslint": "^8.27.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-turbo": "latest",
+		"eslint-plugin-nuxt": "^4.0.0",
+		"eslint-plugin-vue": "^7.20.0",
+		"tsup": "^6.7.0"
+	}
+}
