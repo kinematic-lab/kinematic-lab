@@ -38,6 +38,4 @@ yarn-error.log*
 # nuxt
 .output
 
-# other
 sw.js
-.npmrc
