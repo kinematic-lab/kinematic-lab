@@ -1,5 +1,11 @@
 # eslint-config-core
 
+## 0.0.2
+
+### Patch Changes
+
+-   d12df2f: Added `README.md`.
+
 ## 0.0.1
 
 ### Patch Changes
