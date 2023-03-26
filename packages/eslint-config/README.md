@@ -42,9 +42,9 @@ module.exports = {
 
 ### **`.eslintrc.json`**
 
-```json
+```javascript
 {
 	"extends": ["@kinematic-lab"],
 	// other configuration
-};
+}
 ```
