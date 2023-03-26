@@ -1,6 +1,6 @@
 {
-	"name": "playground",
-	"version": "0.0.0",
+	"name": "@kinematic-lab/playground",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "nuxt dev",
