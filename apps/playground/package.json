@@ -1,0 +1,20 @@
+{
+	"name": "playground",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt dev",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"postinstall": "nuxt prepare",
+		"lint": "prettier --write --list-different . && eslint --ext \".js,.ts,.vue\" . --fix"
+	},
+	"devDependencies": {
+		"@kinematic-lab/eslint-config": "workspace:*",
+		"eslint": "^8.36.0",
+		"prettier": "^2.7.1"
+	},
+	"dependencies": {
+		"nuxt": "^3.3.1"
+	}
+}
