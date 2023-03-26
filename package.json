@@ -7,6 +7,8 @@
 		"packages/*"
 	],
 	"scripts": {
+		"new": "pnpm plop && pnpm install && pnpm run lint",
+		"prepare": "husky install",
 		"build": "pnpm run turbo:build",
 		"dev": "pnpm run turbo:dev",
 		"lint": "prettier --write --list-different . && eslint --ext \".js,.vue\" . && pnpm run turbo:lint",
@@ -15,9 +17,10 @@
 		"turbo:dev": "turbo run dev --parallel",
 		"turbo:lint": "turbo run lint",
 		"turbo:test": "turbo run test",
-		"prepare": "husky install",
-		"new": "pnpm plop && pnpm install && pnpm run lint",
-		"release": "turbo run build lint test && changeset version && changeset publish"
+		"release": "turbo run build lint test && pnpm changeset:version && pnpm changeset:publish",
+		"changeset:create": "pnpm exec changeset",
+		"changeset:version": "pnpm exec changeset version",
+		"changeset:publish": "pnpm exec changeset publish"
 	},
 	"packageManager": "pnpm@7.15.0",
 	"engines": {
