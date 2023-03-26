@@ -1,5 +1,11 @@
 # @kinematic-lab/eslint-config
 
+## 0.0.3
+
+### Patch Changes
+
+-   Bumbed dependecy `eslint-plugin-vue` from 7.20.0 to 9.10.0.
+
 ## 0.0.2
 
 ### Patch Changes
