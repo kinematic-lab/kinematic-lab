@@ -8,6 +8,9 @@ The `@kinematic-lab/typescript-config` contains the default TypeScript configura
 
 -   [Relevant links](#relevant-links)
 -   [Installation](#installation)
+    -   [Using PNPM](#using-pnpm)
+    -   [Using NPM](#using-npm)
+    -   [Using Yarn](#using-yarn)
 -   [Usage](#usage)
 
 <br />
@@ -23,8 +26,28 @@ See npm: [here](https://www.npmjs.com/package/@kinematic-lab/typescript-config).
 
 To use `@kinematic-lab/typescript-config` in your project, you must first install it as a dependency. You can do this by running the following command in your terminal:
 
+<br />
+
+### Using PNPM
+
 ```shell
-$ pnpm i -D @kinematic-lab/typescript-config
+$ pnpm i @kinematic-lab/typescript-config
+```
+
+<br />
+
+### Using NPM
+
+```shell
+$ npm i @kinematic-lab/typescript-config
+```
+
+<br />
+
+### Using Yarn
+
+```shell
+$ yarn add @kinematic-lab/typescript-config
 ```
 
 <br />
@@ -33,7 +56,7 @@ $ pnpm i -D @kinematic-lab/typescript-config
 
 Once you have installed the package, you can use it by extending it in your `tsconfig.json` file. See the examples below:
 
-```json
+```javascript
 {
 	"extends": "@kinematic-lab/typescript-config/core.json"
 	// other configuration

@@ -8,6 +8,9 @@
 
 -   [Relevant links:](#relevant-links)
 -   [Installation](#installation)
+    -   [Using PNPM](#using-pnpm)
+    -   [Using NPM](#using-npm)
+    -   [Using Yarn](#using-yarn)
 -   [Usage](#usage)
     -   [`.eslintrc.js`](#eslintrcjs)
     -   [`.eslintrc.json`](#eslintrcjson)
@@ -25,8 +28,28 @@ See npm: [here](https://www.npmjs.com/package/@kinematic-lab/eslint-config).
 
 To use `@kinematic-lab/eslint-config` in your project, you must first install it as a dependency. You can do this by running the following command in your terminal:
 
+<br />
+
+### Using PNPM
+
 ```shell
-$ pnpm i -D @kinematic-lab/eslint-config
+$ pnpm i @kinematic-lab/eslint-config
+```
+
+<br />
+
+### Using NPM
+
+```shell
+$ npm i @kinematic-lab/eslint-config
+```
+
+<br />
+
+### Using Yarn
+
+```shell
+$ yarn add @kinematic-lab/eslint-config
 ```
 
 <br />
