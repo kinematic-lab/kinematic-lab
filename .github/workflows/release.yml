@@ -33,7 +33,18 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
-            - name: Create Release Pull Request
+            - name: Checking for changesets
+              run: pnpm changeset status --since=main
+
+            - name: Creating .npmrc
+              run: |
+                  cat << EOF > "$HOME/.npmrc"
+                    //registry.npmjs.org/:_authToken=$NPM_TOKEN
+                  EOF
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+            - name: Creating release pull request or publishing
               uses: changesets/action@v1
               with:
                   title: 'chore: package release(s)'
@@ -42,6 +53,3 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-            - name: Checking for changesets
-              run: pnpm exec changeset status --since=main
