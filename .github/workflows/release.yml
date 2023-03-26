@@ -39,7 +39,7 @@ jobs:
             - name: Creating .npmrc
               run: |
                   cat << EOF > "$HOME/.npmrc"
-                    //registry.npmjs.org/:_authToken=$NPM_TOKEN
+                    //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
                   EOF
               env:
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
