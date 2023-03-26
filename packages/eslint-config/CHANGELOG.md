@@ -1,5 +1,11 @@
 # eslint-config
 
+## 0.0.9
+
+### Patch Changes
+
+-   efc005e: Intermediate build.
+
 ## 0.0.8
 
 ### Patch Changes
