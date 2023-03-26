@@ -6,10 +6,18 @@
 
 ## Table of contents <!-- omit in toc -->
 
+-   [Relevant links:](#relevant-links)
 -   [Installation](#installation)
 -   [Usage](#usage)
-    -   [**`.eslintrc.js`**](#eslintrcjs)
-    -   [**`.eslintrc.json`**](#eslintrcjson)
+    -   [`.eslintrc.js`](#eslintrcjs)
+    -   [`.eslintrc.json`](#eslintrcjson)
+
+<br />
+
+## Relevant links:
+
+See changelogs: [Here](https://github.com/kinematic-lab/core/blob/main/packages/eslint-config/CHANGELOG.md).<br />
+See npm: [here](https://www.npmjs.com/package/@kinematic-lab/eslint-config).
 
 <br />
 
@@ -29,7 +37,7 @@ Once you have installed the package, you can use it by extending it in your ESLi
 
 <br />
 
-### **`.eslintrc.js`**
+### `.eslintrc.js`
 
 ```javascript
 module.exports = {
@@ -40,7 +48,7 @@ module.exports = {
 
 <br />
 
-### **`.eslintrc.json`**
+### `.eslintrc.json`
 
 ```javascript
 {
