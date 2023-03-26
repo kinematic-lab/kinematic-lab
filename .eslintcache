@@ -1,1 +1,25 @@
-[{"/Users/askelange/Desktop/KinematicLab/core/packages/eslint-config/index.js":"1"},{"size":748,"mtime":1679856494425,"results":"2","hashOfConfig":"3"},{"filePath":"4","messages":"5","suppressedMessages":"6","errorCount":0,"fatalErrorCount":0,"warningCount":0,"fixableErrorCount":0,"fixableWarningCount":0},"18eyjwa","/Users/askelange/Desktop/KinematicLab/core/packages/eslint-config/index.js",[],[]]
+[
+	{
+		"/Users/askelange/Desktop/KinematicLab/core/packages/eslint-config/index.js": "1"
+	},
+	{
+		"size": 748,
+		"mtime": 1679856494425,
+		"results": "2",
+		"hashOfConfig": "3"
+	},
+	{
+		"filePath": "4",
+		"messages": "5",
+		"suppressedMessages": "6",
+		"errorCount": 0,
+		"fatalErrorCount": 0,
+		"warningCount": 0,
+		"fixableErrorCount": 0,
+		"fixableWarningCount": 0
+	},
+	"18eyjwa",
+	"/Users/askelange/Desktop/KinematicLab/core/packages/eslint-config/index.js",
+	[],
+	[]
+]
