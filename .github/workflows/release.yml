@@ -36,9 +36,6 @@ jobs:
             - name: Checking for changesets
               run: pnpm changeset status --since=main
 
-            - name: Setting up `.npmrc`
-              run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
-
             - name: Creating release pull-request or publishing
               uses: changesets/action@v1
               with:
