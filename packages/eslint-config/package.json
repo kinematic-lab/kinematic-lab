@@ -1,8 +1,7 @@
 {
 	"name": "@kinematic-lab/eslint-config",
-	"version": "0.0.6",
 	"main": "src/index.js",
-	"private": true,
+	"version": "0.0.6",
 	"scripts": {
 		"build": "tsup src/index.js --format cjs"
 	},
