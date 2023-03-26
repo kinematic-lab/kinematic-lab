@@ -4,7 +4,6 @@
 
 ### Patch Changes
 
--   Intermediate build.
 -   9ae8a33: Added build process using packages `tsup`.
 
 ## 0.0.4
