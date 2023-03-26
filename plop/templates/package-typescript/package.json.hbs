@@ -1,6 +1,6 @@
 {
 	"name": "@kinematic-lab/{{dashCase name}}",
-	"main": "./src/index.ts",
+	"main": "./dist/index.js",
 	"version": "0.0.0",
 	"scripts": {
 		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix",
@@ -10,7 +10,7 @@
 		"@kinematic-lab/eslint-config": "workspace:*",
 		"@kinematic-lab/typescript-config": "workspace:*",
 		"eslint": "^7.32.0",
-		"tsup": "^6.7.0"
+		"tsup": "^6.7.0",
 		"typescript": "^4.5.2",
 		"prettier": "^2.7.1"
 	}
