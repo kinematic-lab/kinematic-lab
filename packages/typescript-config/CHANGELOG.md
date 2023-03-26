@@ -1,5 +1,11 @@
 # typescript-config
 
+## 0.0.10
+
+### Patch Changes
+
+-   20de830: Intermediate build.
+
 ## 0.0.9
 
 ### Patch Changes
