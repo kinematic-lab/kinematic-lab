@@ -7,9 +7,6 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
-env:
-    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
     release:
         name: Release
@@ -38,6 +35,14 @@ jobs:
 
             - name: Checking for changesets
               run: pnpm changeset status --since=main
+
+            - name: Creating `.npmrc`
+              run: |
+                  cat << EOF > "$HOME/.npmrc"
+                    //registry.npmjs.org/:_authToken=$NPM_TOKEN
+                  EOF
+              env:
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
             - name: Creating release pull-request or publishing
               uses: changesets/action@v1
