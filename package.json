@@ -25,7 +25,7 @@
 		"changeset:create": "pnpm changeset",
 		"changeset:create-empty": "pnpm changeset --empty",
 		"changeset:version": "pnpm changeset version",
-		"changeset:publish": "pnpm changeset publish"
+		"changeset:publish": "turbo run build lint test && pnpm changeset publish"
 	},
 	"engines": {
 		"node": ">=v16.15.0"

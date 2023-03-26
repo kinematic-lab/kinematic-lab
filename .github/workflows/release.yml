@@ -44,8 +44,8 @@ jobs:
               with:
                   title: 'chore: package release(s)'
                   commit: 'chore: package release(s)'
-                  publish: pnpm turbo run build lint test && pnpm changeset:publish
-                  version: pnpm changeset:version
+                  publish: pnpm run changeset:publish
+                  version: pnpm run changeset:version
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
