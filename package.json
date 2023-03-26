@@ -16,7 +16,8 @@
 		"turbo:lint": "turbo run lint",
 		"turbo:test": "turbo run test",
 		"prepare": "husky install",
-		"new": "pnpm plop && pnpm install && pnpm run lint"
+		"new": "pnpm plop && pnpm install && pnpm run lint",
+		"release": "pnpx changeset publish"
 	},
 	"packageManager": "pnpm@7.15.0",
 	"engines": {
