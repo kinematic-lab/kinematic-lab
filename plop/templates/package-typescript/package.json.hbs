@@ -1,10 +1,10 @@
 {
 	"name": "@kinematic-lab/{{dashCase name}}",
-	"main": "./dist/index.js",
+	"main": "./dist/index.mjs",
 	"version": "0.0.0",
 	"scripts": {
 		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix",
-		"build": "tsup src/index.ts --format cjs --dts"
+		"build": "tsup --format esm"
 	},
 	"devDependencies": {
 		"@kinematic-lab/eslint-config": "workspace:*",
