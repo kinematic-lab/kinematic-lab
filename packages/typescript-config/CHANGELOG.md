@@ -1,5 +1,12 @@
 # typescript-config
 
+## 0.0.5
+
+### Patch Changes
+
+-   Intermediate build.
+-   9ae8a33: Added build process using packages `tsup`.
+
 ## 0.0.4
 
 ### Patch Changes

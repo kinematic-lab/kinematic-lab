@@ -24,7 +24,7 @@
 		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
-		"@kinematic-lab/eslint-config": "^0.0.4",
+		"@kinematic-lab/eslint-config": "^0.0.5",
 		"@changesets/cli": "^2.26.1",
 		"@commitlint/config-conventional": "^17.4.4",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
