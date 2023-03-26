@@ -4,6 +4,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended',
 		'plugin:nuxt/recommended',
+		'turbo',
 		'prettier',
 	],
 	plugins: ['vue', '@typescript-eslint'],
