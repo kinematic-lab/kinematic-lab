@@ -1,4 +1,4 @@
 module.exports = {
 	root: true,
-	extends: ['core'],
+	extends: '@kinematic-lab',
 };

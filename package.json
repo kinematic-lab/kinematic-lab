@@ -32,7 +32,7 @@
 		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
-		"@kinematic-lab/eslint-config": "workspace:^0.0.8",
+		"@kinematic-lab/eslint-config": "workspace:*",
 		"@changesets/cli": "^2.26.1",
 		"@commitlint/config-conventional": "^17.4.4",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
