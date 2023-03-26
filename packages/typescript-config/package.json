@@ -2,6 +2,7 @@
 	"name": "@kinematic-lab/typescript-config",
 	"main": "src/index.js",
 	"version": "0.0.6",
+	"private": false,
 	"scripts": {
 		"build": "tsup src/index.js --format cjs"
 	},

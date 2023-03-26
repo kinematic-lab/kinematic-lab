@@ -1,6 +1,7 @@
 {
 	"name": "turbo-boilerplate",
 	"version": "0.0.0",
+	"private": false,
 	"workspaces": [
 		"apps/*",
 		"packages/*"
