@@ -4,6 +4,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:vue/vue3-recommended',
 		'plugin:nuxt/recommended',
+		'turbo',
 		'prettier',
 	],
 	plugins: ['vue', '@typescript-eslint'],
@@ -28,5 +29,6 @@ module.exports = {
 		'vue/no-v-html': 0,
 		'vue/no-v-text-v-html-on-component': 0,
 		'vue/multi-word-component-names': 0,
+		'@typescript-eslint/triple-slash-reference': 0,
 	},
 };

@@ -1,6 +1,6 @@
 {
-	"name": "@kinematic-lab/{{dashCase name}}",
-	"version": "0.0.0",
+	"name": "@kinematic-lab/playground",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
 		"dev": "nuxt dev",
@@ -15,7 +15,6 @@
 		"prettier": "^2.7.1"
 	},
 	"dependencies": {
-		"@nuxt/kit": "^3.3.1",
 		"nuxt": "^3.3.1"
 	}
 }

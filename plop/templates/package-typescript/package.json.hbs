@@ -1,15 +1,16 @@
 {
-	"name": "{{dashCase name}}",
+	"name": "@kinematic-lab/{{dashCase name}}",
+	"main": "./dist/index.mjs",
 	"version": "0.0.0",
-	"main": "./src/index.ts",
-	"private": true,
 	"scripts": {
-		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix"
+		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix",
+		"build": "tsup --format esm"
 	},
 	"devDependencies": {
+		"@kinematic-lab/eslint-config": "workspace:*",
+		"@kinematic-lab/typescript-config": "workspace:*",
 		"eslint": "^7.32.0",
-		"eslint-config-core": "workspace:*",
-		"tsconfig": "workspace:*",
+		"tsup": "^6.7.0",
 		"typescript": "^4.5.2",
 		"prettier": "^2.7.1"
 	}
