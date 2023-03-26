@@ -22,7 +22,6 @@
 		"turbo:dev": "turbo run dev --parallel",
 		"turbo:lint": "turbo run lint",
 		"turbo:test": "turbo run test",
-		"release": "turbo run build lint test && pnpm changeset:version && pnpm changeset:publish",
 		"changeset:create": "pnpm changeset",
 		"changeset:create-empty": "pnpm changeset --empty",
 		"changeset:version": "pnpm changeset version",
