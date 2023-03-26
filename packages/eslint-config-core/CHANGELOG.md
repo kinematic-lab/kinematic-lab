@@ -1,5 +1,11 @@
 # eslint-config-core
 
+## 0.0.3
+
+### Patch Changes
+
+-   0887b4d: Extended README.md files, with minimal installation and usage explanations.
+
 ## 0.0.2
 
 ### Patch Changes
