@@ -1,7 +1,12 @@
 {
-	"name": "turbo-boilerplate",
+	"name": "@kinematic-lab/turbo-boilerplate",
 	"version": "0.0.0",
 	"private": false,
+	"packageManager": "pnpm@7.15.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kinematic-lab/TurboBoilerplate.git"
+	},
 	"workspaces": [
 		"apps/*",
 		"packages/*"
@@ -23,11 +28,11 @@
 		"changeset:version": "pnpm changeset version",
 		"changeset:publish": "pnpm changeset publish"
 	},
-	"packageManager": "pnpm@7.15.0",
 	"engines": {
 		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
+		"@kinematic-lab/eslint-config": "workspace:^0.0.8",
 		"@changesets/cli": "^2.26.1",
 		"@commitlint/config-conventional": "^17.4.4",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
