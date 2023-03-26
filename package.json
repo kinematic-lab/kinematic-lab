@@ -18,9 +18,10 @@
 		"turbo:lint": "turbo run lint",
 		"turbo:test": "turbo run test",
 		"release": "turbo run build lint test && pnpm changeset:version && pnpm changeset:publish",
-		"changeset:create": "pnpm exec changeset",
-		"changeset:version": "pnpm exec changeset version",
-		"changeset:publish": "pnpm exec changeset publish"
+		"changeset:create": "pnpm changeset",
+		"changeset:create-empty": "pnpm changeset --empty",
+		"changeset:version": "pnpm changeset version",
+		"changeset:publish": "pnpm changeset publish"
 	},
 	"packageManager": "pnpm@7.15.0",
 	"engines": {
