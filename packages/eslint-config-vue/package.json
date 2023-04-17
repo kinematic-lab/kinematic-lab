@@ -1,15 +1,13 @@
 {
-	"name": "@kinematic-lab/eslint-config",
+	"name": "@kinematic-lab/eslint-config-vue",
 	"main": "index.js",
-	"version": "0.0.3",
+	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kinematic-lab/TurboBoilerplate.git",
-		"directory": "packages/eslint-config"
+		"url": "https://github.com/kinematic-lab/core.git",
+		"directory": "packages/eslint-config-vue"
 	},
 	"devDependencies": {
-		"@babel/eslint-parser": "^7.19.1",
-		"@babel/preset-env": "^7.19.1",
 		"eslint": "^8.27.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-config-turbo": "latest",
