@@ -1,0 +1,5 @@
+{
+	"extends": "@kinematic-lab/typescript-config/core.json",
+	"compilerOptions": { "typeRoots": ["./types"] },
+	"include": ["./src"]
+}
