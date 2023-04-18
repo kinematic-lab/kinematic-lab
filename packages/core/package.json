@@ -1,7 +1,7 @@
 {
 	"name": "@kinematic-lab/core",
 	"main": "./dist/index.mjs",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kinematic-lab/core.git",
