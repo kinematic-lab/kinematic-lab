@@ -6,18 +6,6 @@
 
 Implemented the following modules (+ methods and fields) in the package:
 
--   **Function: `LabProperty`.**
-
-    See documentation [here](#).
-
-    <br />
-
--   **Function: `LabPropertyGroup`.**
-
-    See documentation [here](#).
-
-    <br />
-
 -   **Function: `LabCubicBezier`.**
 
     See documentation [here](#).<br />
@@ -40,7 +28,3 @@ Implemented the following modules (+ methods and fields) in the package:
     -   Method: `getActualTime()`.
 
     <br />
-
--   **Function: `LabVector`.**
-
-    See documentation [here](#).
