@@ -1,5 +1,5 @@
 {
-	"name": "@kinematic-lab/turbo-boilerplate",
+	"name": "core",
 	"version": "0.0.0",
 	"private": false,
 	"packageManager": "pnpm@7.15.0",
@@ -31,7 +31,7 @@
 		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
-		"@kinematic-lab/eslint-config": "workspace:*",
+		"@kinematic-lab/eslint-config-typescript": "workspace:*",
 		"@changesets/cli": "^2.26.1",
 		"@commitlint/config-conventional": "^17.4.4",
 		"@typescript-eslint/eslint-plugin": "^5.56.0",
