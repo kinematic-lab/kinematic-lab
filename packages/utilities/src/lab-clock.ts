@@ -2,13 +2,11 @@ export default (): LabClock => {
 	const isPerformanceSupported = typeof performance !== 'undefined';
 	const timeStart = (isPerformanceSupported ? performance : Date).now();
 	const timePrevious = timeStart;
-	const timeElapsed = timeStart;
 
 	return {
 		isPerformanceSupported,
 		timeStart,
 		timePrevious,
-		timeElapsed,
 
 		reset() {
 			this.timeStart = this.getActualTime();

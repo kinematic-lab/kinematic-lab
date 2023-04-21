@@ -1,11 +1,11 @@
 {
-	"name": "@kinematic-lab/core",
+	"name": "@kinematic-lab/utilities",
 	"main": "./dist/index.mjs",
 	"version": "0.0.0",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kinematic-lab/core.git",
-		"directory": "packages/core"
+		"directory": "packages/utilities"
 	},
 	"scripts": {
 		"lint": "prettier --write --list-different . && eslint --ext \".ts,.vue\" . --fix",

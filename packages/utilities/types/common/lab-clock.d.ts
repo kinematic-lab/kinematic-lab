@@ -1,6 +1,5 @@
 interface LabClock {
 	isPerformanceSupported?: boolean;
-	timeElapsed: number;
 	timeStart: number | null;
 	timePrevious: number | null;
 
