@@ -1,10 +1,12 @@
 node_modules
+dist
+.turbo
 .nuxt
 .output
-.turbo
-dist
-static
+
+/apps/**/public
 plop/templates
+
 sw.js
 *.min.js
 .eslintcache
