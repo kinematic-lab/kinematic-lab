@@ -16,15 +16,12 @@ Note that `@kinematic-lab/utilities` is **not** a full framework for crafting an
 -   [Modules](#modules)
     -   [Lab.Clock](#labclock)
     -   [Lab.CubicBezier](#labcubicbezier)
--   [Contributing](#contributing)
--   [Contributors](#contributors)
--   [Showcase](#showcase)
 
 <br />
 
 ## Relevant links
 
-See changelogs: [here](https://github.com/kinematic-lab/utilities/blob/main/packages/utilities/CHANGELOG.md).<br />
+See changelogs: [here](/packages/utilities/CHANGELOG.md).<br />
 See npm: [here](https://www.npmjs.com/package/@kinematic-lab/utilities).
 
 <br />
@@ -65,30 +62,10 @@ $ yarn add @kinematic-lab/utilities
 
 ### Lab.Clock
 
-See full documentation: [here](/docs/lab-clock.md).
+See full documentation: [here](/packages/utilities/docs/lab-clock.md).
 
 <br />
 
 ### Lab.CubicBezier
 
-See full documentation: [here](/docs/lab-cubic-bezier.md).
-
-<br />
-
-## Contributing
-
-\-
-
-<br />
-
-## Contributors
-
-\-
-
-<br />
-
-## Showcase
-
-\-
-
-<br />
+See full documentation: [here](/packages/utilities/docs/lab-cubic-bezier.md).
