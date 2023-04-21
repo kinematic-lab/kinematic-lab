@@ -1,4 +1,4 @@
-# @kinematic-lab/utilities <!-- omit in toc -->
+# `@kinematic-lab/utilities` <!-- omit in toc -->
 
 Blazingly-fast utilties for working with the future `@kinematic-lab` packages and general transitions in JavaScript ⚡
 
@@ -58,13 +58,9 @@ $ yarn add @kinematic-lab/utilities
 
 ## Modules
 
-<br />
-
 ### Lab.Clock
 
 See full documentation: [here](/packages/utilities/docs/lab-clock.md).
-
-<br />
 
 ### Lab.CubicBezier
 
