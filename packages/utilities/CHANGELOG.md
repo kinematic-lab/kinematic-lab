@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.0.3
+
+### Patch Changes
+
+-   067b02f: Corrected links in `README.md`.
+
 ## 0.0.2
 
 ### Patch Changes
