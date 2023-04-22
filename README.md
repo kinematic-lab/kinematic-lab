@@ -1,4 +1,3 @@
-
 <br />
 
 # <img src="https://user-images.githubusercontent.com/44546482/233735340-0553ed3d-0821-44bd-9fee-b08b1924c357.svg" height="40" />&nbsp;&nbsp;&nbsp;Kinematic Lab <!-- omit in toc -->
