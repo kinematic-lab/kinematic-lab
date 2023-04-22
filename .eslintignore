@@ -10,3 +10,4 @@ plop/templates
 sw.js
 *.min.js
 .eslintcache
+pnpm-lock.yaml
