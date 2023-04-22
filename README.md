@@ -22,6 +22,9 @@
 Kinematic Lab provides the following packages:
 
 -   [**`@kinematic-lab/utilities`**](/packages/utilities/)
+-   [**`@kinematic-lab/eslint-config-typescript`**](/packages/eslint-config-typescript/)
+-   [**`@kinematic-lab/eslint-config-vue`**](/packages/eslint-config-vue/)
+-   [**`@kinematic-lab/typescript-config`**](/packages/typescript-config/)
 
 <br />
 
