@@ -2,8 +2,7 @@ name: Frontend / Package Release
 
 on:
     push:
-        branches:
-            - main
+        branches: ['main']
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -35,6 +34,9 @@ jobs:
 
             - name: Checking for changesets
               run: pnpm changeset status --since=main
+
+            - name: Testing
+              run: pnpm run test
 
             - name: Creating `.npmrc`
               run: |

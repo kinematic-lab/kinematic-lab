@@ -4,9 +4,12 @@ export default (): LabClock => {
 	const timePrevious = timeStart;
 
 	return {
-		isPerformanceSupported,
 		timeStart,
 		timePrevious,
+
+		get isPerformanceSupported() {
+			return isPerformanceSupported;
+		},
 
 		reset() {
 			this.timeStart = this.getActualTime();
