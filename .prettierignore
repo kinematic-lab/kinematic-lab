@@ -1,7 +1,15 @@
 .nuxt
 .output
 .turbo
+node_modules
 dist
-static
-plop
+
+sw.js
+*.min.js
 .eslintcache
+pnpm-lock.yaml
+
+/apps/**/public
+plop/templates
+
+

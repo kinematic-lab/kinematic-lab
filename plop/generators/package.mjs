@@ -33,7 +33,7 @@ export default (rootDirectory, plopDirectory) => {
 
 				globOptions: {
 					dot: true,
-				}
+				},
 			},
 		],
 	};
