@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.0.2
+
+### Patch Changes
+
+-   54b4bdb: Made `isPerformanceSupported` in `Lab.Clock` read-only.
+
 ## 0.0.1
 
 ### Patch Changes
