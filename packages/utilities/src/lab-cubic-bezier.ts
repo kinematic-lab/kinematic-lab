@@ -5,26 +5,18 @@ export default (
 	y1: number,
 	options?: LabCubicBezierOptions
 ): LabShapingFunction => {
-	const precision = options?.precision ?? 512;
-	const maxIterations = options?.maxIterations ?? 64;
+	const precision = options?.precision ?? 256;
+	const maxIterations = options?.maxIterations ?? 32;
 	const maxErrorMargin = options?.maxErrorMargin ?? 1 / 10 ** 8;
 
-	const getBezierFunction = (
-		p0: number,
-		p1: number,
-		p2: number,
-		p3: number,
-		t: number
-	) => {
-		const a0 = (1 - t) ** 3 * p0;
-		const a1 = 3 * t * (1 - t) ** 2 * p1;
-		const a2 = 3 * (1 - t) * t ** 2 * p2;
-		const a3 = t ** 3 * p3;
-		return a0 + a1 + a2 + a3;
+	const getBezierFunction = (p1: number, p2: number, t: number) => {
+		const a0 = 3 * t * (1 - t) ** 2 * p1;
+		const a1 = 3 * (1 - t) * t ** 2 * p2;
+		return a0 + a1 + t ** 3;
 	};
 
-	const getX = (u: number) => getBezierFunction(0, x0, x1, 1, u);
-	const getY = (u: number) => getBezierFunction(0, y0, y1, 1, u);
+	const sampleX = (u: number) => getBezierFunction(x0, x1, u);
+	const sampleY = (u: number) => getBezierFunction(y0, y1, u);
 	const steps: number[] = new Array(precision + 1);
 
 	for (let index = 0; index <= precision; index++) {
@@ -33,17 +25,19 @@ export default (
 		let x2 = 0;
 
 		for (let iteration = 0; iteration < maxIterations; iteration++) {
-			const ox0 = getX(x0) - index / precision;
-			const ox1 = getX(x1) - index / precision;
+			const ox0 = sampleX(x0) - index / precision;
+			const ox1 = sampleX(x1) - index / precision;
 
 			x2 = (x0 * ox1 - x1 * ox0) / (ox1 - ox0);
 			x0 = x1;
 			x1 = x2;
 
-			if (Math.abs(getX(x2) - index / precision) < maxErrorMargin) break;
+			if (Math.abs(sampleX(x2) - index / precision) < maxErrorMargin) {
+				break;
+			}
 		}
 
-		steps[index] = getY(x2);
+		steps[index] = sampleY(x2);
 	}
 
 	return (x: number) => {
