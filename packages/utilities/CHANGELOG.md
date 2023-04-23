@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.0.4
+
+### Patch Changes
+
+-   3652299: Updated documentation with an `options` section, and cleaned-up the code a bit 🧹
+
 ## 0.0.3
 
 ### Patch Changes
