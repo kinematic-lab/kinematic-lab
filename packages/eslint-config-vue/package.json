@@ -8,7 +8,7 @@
 		"directory": "packages/eslint-config-vue"
 	},
 	"devDependencies": {
-		"eslint": "^8.27.0",
+		"eslint": "^8.43.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-config-turbo": "latest",
 		"eslint-plugin-nuxt": "^4.0.0",
