@@ -11,7 +11,7 @@
 	},
 	"devDependencies": {
 		"@kinematic-lab/eslint-config-vue": "workspace:*",
-		"eslint": "^8.36.0",
+		"eslint": "^8.45.0",
 		"prettier": "^2.7.1"
 	},
 	"dependencies": {
