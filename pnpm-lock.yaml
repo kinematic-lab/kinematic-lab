@@ -12,7 +12,7 @@ importers:
       commitlint: ^17.4.4
       eslint: ^8.45.0
       eslint-config-prettier: ^8.3.0
-      eslint-plugin-vue: ^9.10.0
+      eslint-plugin-vue: ^9.15.1
       husky: ^8.0.2
       lint-staged: ^13.2.0
       plop: ^3.1.2
@@ -69,7 +69,7 @@ importers:
       eslint-config-prettier: ^8.3.0
       eslint-config-turbo: latest
       eslint-plugin-nuxt: ^4.0.0
-      eslint-plugin-vue: ^9.10.0
+      eslint-plugin-vue: ^9.15.1
     devDependencies:
       eslint: 8.45.0
       eslint-config-prettier: 8.8.0_eslint@8.45.0
@@ -8859,8 +8859,8 @@ packages:
       debug: 4.3.4
       eslint: 8.45.0
       eslint-scope: 7.2.0
-      eslint-visitor-keys: 3.4.0
-      espree: 9.5.1
+      eslint-visitor-keys: 3.4.1
+      espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
       semver: 7.5.0
