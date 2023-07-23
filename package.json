@@ -39,7 +39,7 @@
 		"commitlint": "^17.4.4",
 		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-vue": "^9.10.0",
+		"eslint-plugin-vue": "^9.15.1",
 		"husky": "^8.0.2",
 		"lint-staged": "^13.2.0",
 		"plop": "^3.1.2",
