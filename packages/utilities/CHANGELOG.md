@@ -1,5 +1,13 @@
 # @kinematic-lab/utilities
 
+## 0.0.5
+
+### Patch Changes
+
+-   353f6fa: chore: bumbed `typescript`
+-   5182123: chore: bumbed `@types/node`
+-   7388899: chore: bumbed `eslint`
+
 ## 0.0.4
 
 ### Patch Changes
