@@ -1,13 +1,14 @@
 {
 	"name": "@kinematic-lab/eslint-config-typescript",
 	"main": "index.js",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kinematic-lab/core.git",
 		"directory": "packages/eslint-config-typescript"
 	},
-	"devDependencies": {
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
 		"@typescript-eslint/parser": "^5.56.0",
 		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.3.0",
