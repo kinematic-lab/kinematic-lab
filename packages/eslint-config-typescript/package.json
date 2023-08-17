@@ -8,7 +8,7 @@
 		"directory": "packages/eslint-config-typescript"
 	},
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/eslint-plugin": "^5.62.0",
 		"@typescript-eslint/parser": "^5.56.0",
 		"eslint": "^8.45.0",
 		"eslint-config-prettier": "^8.3.0",
