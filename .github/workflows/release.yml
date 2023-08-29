@@ -1,4 +1,4 @@
-name: Frontend / Package Release
+name: Package Release
 
 on:
     push:
