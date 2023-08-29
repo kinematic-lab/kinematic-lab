@@ -1,8 +1,8 @@
 # `@kinematic-lab/utilities` <!-- omit in toc -->
 
-Blazingly-fast utilties for working with the future `@kinematic-lab` packages and general transitions in JavaScript ⚡
+Utilties for working with the future `@kinematic-lab` packages and general transitions in JavaScript ⚡
 
-Note that `@kinematic-lab/utilities` is **not** a full framework for crafting animations, but instead a set of tools focusing on quality-of-life when working with pure JavaScript transitions, from simple scroll-animations to three-dimensional-crazyness.
+Note that `@kinematic-lab/utilities` is **not** a full framework for crafting animations, but instead a set of tools focusing on quality-of-life when working with pure JavaScript transitions, from bezier implementations to vector implementations.
 
 <br />
 
@@ -16,6 +16,7 @@ Note that `@kinematic-lab/utilities` is **not** a full framework for crafting an
 -   [Modules](#modules)
     -   [Lab.Clock](#labclock)
     -   [Lab.CubicBezier](#labcubicbezier)
+    -   [Lab.Vector](#labvector)
 
 <br />
 
@@ -65,3 +66,7 @@ See full documentation: [here](https://github.com/kinematic-lab/core/tree/main/p
 ### Lab.CubicBezier
 
 See full documentation: [here](https://github.com/kinematic-lab/core/tree/main/packages/utilities/docs/lab-cubic-bezier.md).
+
+### Lab.Vector
+
+See full documentation: [here](https://github.com/kinematic-lab/core/tree/main/packages/utilities/docs/lab-vector.md).
