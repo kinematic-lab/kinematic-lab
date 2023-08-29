@@ -41,10 +41,13 @@ export default (
 	}
 
 	return (x: number) => {
-		const x0 = Math.floor(x * precision) / precision ?? 0;
-		const x1 = Math.ceil(x * precision) / precision ?? 1;
-		const y0 = steps[Math.floor(x * precision)] ?? 0;
-		const y1 = steps[Math.ceil(x * precision)] ?? 1;
+		const upper = Math.floor(x * precision);
+		const lower = Math.ceil(x * precision);
+
+		const x0 = upper / precision ?? 0;
+		const x1 = lower / precision ?? 1;
+		const y0 = steps[upper] ?? 0;
+		const y1 = steps[lower] ?? 1;
 
 		const percentage = (x - x0) / (x1 - x0) || 0;
 		return (y1 - y0) * percentage + y0;
