@@ -11,6 +11,10 @@
 		"apps/*",
 		"packages/*"
 	],
+	"author": {
+		"name": "Aske Kjøller Lange",
+		"email": "ala@limbo.works"
+	},
 	"scripts": {
 		"new": "pnpm plop && pnpm install && pnpm run lint",
 		"prepare": "husky install",
