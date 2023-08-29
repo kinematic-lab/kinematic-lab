@@ -1,5 +1,12 @@
 # @kinematic-lab/utilities
 
+## 0.1.0
+
+### Minor Changes
+
+-   287be63: Implemented `LabVector` module.
+    See documentation [here](https://github.com/kinematic-lab/core/blob/main/packages/utilities/docs/lab-vector.md).
+
 ## 0.0.5
 
 ### Patch Changes
