@@ -40,6 +40,16 @@ function handleIndexAccessors(target: LabVector, accessor: string) {
 }
 
 /**
+ * Parses a vector or number array, as a number array.
+ *
+ * @param {LabVector | number[]} source
+ * @returns
+ */
+function parseSource(source: LabVector | number[]) {
+	return Array.isArray(source) ? source : source.value;
+}
+
+/**
  * Vector proxy generator
  */
 const handler = {
@@ -55,42 +65,55 @@ function Vector(...value: number[]): LabVector {
 		{
 			value,
 
-			add(v: LabVector): LabVector {
+			add(v: LabVector | number[]): LabVector {
+				const source = parseSource(v);
 				this.value.forEach((value, index) => {
-					this.value[index] = value + v.value[index];
+					this.value[index] = value + source[index];
 				});
 
 				return this;
 			},
 
-			subtract(v: LabVector): LabVector {
+			subtract(v: LabVector | number[]): LabVector {
+				const source = parseSource(v);
 				this.value.forEach((value, index) => {
-					this.value[index] = value - v.value[index];
+					this.value[index] = value - source[index];
 				});
 
 				return this;
 			},
 
-			multiply(v: LabVector): LabVector {
+			multiply(v: LabVector | number[]): LabVector {
+				const source = parseSource(v);
 				this.value.forEach((value, index) => {
-					this.value[index] = value * v.value[index];
+					this.value[index] = value * source[index];
 				});
 
 				return this;
 			},
 
-			divide(v: LabVector): LabVector {
+			divide(v: LabVector | number[]): LabVector {
+				const source = parseSource(v);
 				this.value.forEach((value, index) => {
-					this.value[index] = value / v.value[index];
+					this.value[index] = value / source[index];
+				});
+
+				return this;
+			},
+
+			interpolate(v: LabVector | number[], t: number): LabVector {
+				const source = parseSource(v);
+				this.value.forEach((value, index) => {
+					if (source[index]) {
+						this.value[index] = (1 - t) * value + t * source[index];
+					}
 				});
 
 				return this;
 			},
 
 			normalise(): LabVector {
-				const sum = this.value.reduce((acc, cur) => acc + cur * cur, 0);
-				const distance = Math.pow(sum, 1 / this.value.length);
-
+				const distance = this.getDistance();
 				this.value.forEach((value, index) => {
 					this.value[index] = value / distance;
 				});
@@ -98,15 +121,9 @@ function Vector(...value: number[]): LabVector {
 				return this;
 			},
 
-			interpolate(v: LabVector, t: number): LabVector {
-				this.value.forEach((value, index) => {
-					if (v?.value[index]) {
-						this.value[index] =
-							(1 - t) * value + t * v.value[index];
-					}
-				});
-
-				return this;
+			getDistance() {
+				const sum = this.value.reduce((acc, cur) => acc + cur * cur, 0);
+				return Math.sqrt(sum);
 			},
 
 			clone(): LabVector {
@@ -117,6 +134,7 @@ function Vector(...value: number[]): LabVector {
 				return `Lab.Vector(${this.value.join(', ')})`;
 			},
 		},
+
 		handler
 	);
 }
