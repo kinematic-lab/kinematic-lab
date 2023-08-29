@@ -1,5 +1,5 @@
 ---
-name: Frontend / Bug
+name: Bug
 about: Somethings wrong.
 title: 'fix(`scope`): description'
 labels: frontend/bug, status/todo

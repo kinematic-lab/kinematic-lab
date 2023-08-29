@@ -1,5 +1,5 @@
 ---
-name: Frontend / Feature
+name: Feature
 about: New functionality.
 title: 'feat(`scope`): description'
 labels: frontend/feature, status/todo

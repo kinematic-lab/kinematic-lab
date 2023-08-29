@@ -1,5 +1,5 @@
 ---
-name: Frontend / Documentation
+name: Documentation
 about: Documentation that needs to be added to package, app, etc.
 title: 'docs(`scope`): description'
 labels: frontend/documentation, status/todo

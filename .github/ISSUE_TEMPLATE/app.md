@@ -1,14 +1,14 @@
 ---
-name: Frontend / App
-about: New app.
-title: 'app(`scope`): description'
+name: Application
+about: New application.
+title: 'feat(`apps/scope`): description'
 labels: frontend/app, status/todo
 assignees: AskeLange
 ---
 
 ## General information
 
-App name: `xxx`.
+Application name: `xxx`.
 Relevant link: [See here](#).
 
 ## Description

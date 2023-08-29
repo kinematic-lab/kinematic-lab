@@ -1,7 +1,7 @@
 ---
-name: Frontend / Package
+name: Package
 about: New package.
-title: 'package(`scope`): description'
+title: 'feat(`packages/scope`): description'
 labels: frontend/package, status/todo
 assignees: AskeLange
 ---
