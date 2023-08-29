@@ -1,8 +1,15 @@
-function handleGetAccessors(target: LabVector, name: string) {
+/**
+ * Handles token parameters such as `xyz`, `rgba` or any subset of these.
+ * Returns a new vector which is a subset of the original.
+ *
+ * @param {LabVector} target
+ * @param {string} name
+ * @returns
+ */
+function handleTokenAccessors(target: LabVector, accessor: string) {
 	const accessors = Object.entries({ 0: 'xr', 1: 'yg', 2: 'zb', 3: 'a' });
-	const match = name.matchAll?.(/(^[rgba]{1,4}$)|(^[xyz]{1,3}$)/g);
+	const match = accessor.matchAll?.(/(^[rgba]{1,4}$)|(^[xyz]{1,3}$)/g);
 	const group = match && [...match]?.[0]?.[0];
-	console.log(accessors, group);
 
 	if (group) {
 		const response: number[] = [];
@@ -10,20 +17,36 @@ function handleGetAccessors(target: LabVector, name: string) {
 			for (let j = 0; j < accessors.length; j++) {
 				const [index, tokens] = accessors[j];
 				tokens.includes(group[i]) &&
-					response.push(target.value[+index]);
+					response.push(target.value[+index] ?? 0);
 			}
 		}
 
-		return response;
+		return Vector(...response);
 	}
 }
 
+/**
+ * Handles index accessors such as [0], [1], etc.
+ * Returns the corresponding number value.
+ *
+ * @param {LabVector} target
+ * @param {string} accessor
+ * @returns
+ */
+function handleIndexAccessors(target: LabVector, accessor: string) {
+	if ([...(accessor.matchAll?.(/^\d+$/g) ?? [])]?.[0]) {
+		return target.value[parseInt(accessor)];
+	}
+}
+
+/**
+ * Vector proxy generator
+ */
 const handler = {
-	get(target: LabVector, name: string) {
-		// const tokens = handleGetAccessors(target, name);
-		// const members = name && Reflect.get(target, name);
-		console.log(target, name);
-		return target.value;
+	get(target: LabVector, accessor: string) {
+		const byIndex = handleIndexAccessors(target, accessor);
+		const byToken = handleTokenAccessors(target, accessor);
+		return byIndex ?? byToken ?? Reflect.get(target, accessor);
 	},
 };
 
@@ -91,7 +114,7 @@ function Vector(...value: number[]): LabVector {
 			},
 
 			toString(): string {
-				return `Lab.Vector(${this.value.join(',')})`;
+				return `Lab.Vector(${this.value.join(', ')})`;
 			},
 		},
 		handler
