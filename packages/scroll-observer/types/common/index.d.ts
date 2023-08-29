@@ -1,0 +1,1 @@
+/// <reference path="module-example.d.ts" />
