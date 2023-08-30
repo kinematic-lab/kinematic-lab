@@ -1,6 +1,0 @@
-import { ModuleExample } from '../src/index';
-
-test('Lab.ModuleExample: General', () => {
-	const example = ModuleExample({});
-	expect(example).toMatchObject({ isExample: true });
-});

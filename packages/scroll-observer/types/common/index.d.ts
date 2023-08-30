@@ -1,1 +1,1 @@
-/// <reference path="module-example.d.ts" />
+/// <reference path="observer.d.ts" />

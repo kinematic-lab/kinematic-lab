@@ -1,3 +1,3 @@
-import ModuleExample from './module-example';
+import Observer from './observer';
 
-export { ModuleExample };
+export { Observer };
