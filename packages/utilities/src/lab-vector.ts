@@ -1,12 +1,12 @@
 /**
  * Handles token parameters such as `xyz`, `rgba` or any subset of these.
- * Returns a new vector which is a subset of the original.
+ * Returns the corresponding index values.
  *
  * @param {LabVector} target
  * @param {string} name
- * @returns
+ * @returns {number[]}
  */
-function handleTokenAccessors(target: LabVector, accessor: string) {
+function handleTokenAccessors(accessor: string): number[] {
 	const accessors = Object.entries({ 0: 'xr', 1: 'yg', 2: 'zb', 3: 'a' });
 	const match = accessor.matchAll?.(/(^[rgba]{1,4}$)|(^[xyz]{1,3}$)/g);
 	const group = match && [...match]?.[0]?.[0];
@@ -16,37 +16,52 @@ function handleTokenAccessors(target: LabVector, accessor: string) {
 		for (let i = 0; i < group.length; i++) {
 			for (let j = 0; j < accessors.length; j++) {
 				const [index, tokens] = accessors[j];
-				tokens.includes(group[i]) &&
-					response.push(target.value[+index] ?? 0);
+				tokens.includes(group[i]) && response.push(+index);
 			}
 		}
 
-		return Vector(...response);
+		return response;
 	}
+
+	return [];
 }
 
 /**
  * Handles index accessors such as [0], [1], etc.
- * Returns the corresponding number value.
+ * Returns the corresponding index values.
  *
  * @param {LabVector} target
  * @param {string} accessor
- * @returns
+ * @returns {number[]}
  */
-function handleIndexAccessors(target: LabVector, accessor: string) {
+function handleIndexAccessors(accessor: string): number[] {
 	if ([...(accessor.matchAll?.(/^\d+$/g) ?? [])]?.[0]) {
-		return target.value[parseInt(accessor)];
+		return [parseInt(accessor)];
 	}
+
+	return [];
 }
 
 /**
  * Parses a vector or number array, as a number array.
  *
  * @param {LabVector | number[]} source
- * @returns
+ * @returns {number[]}
  */
-function parseSource(source: LabVector | number[]) {
+function parseSource(source: LabVector | number[]): number[] {
 	return Array.isArray(source) ? source : source.value;
+}
+
+/**
+ * Parses a value of any type, as a number array.
+ *
+ * @param {any} value
+ * @returns {number[]}
+ */
+function parseValue(value: any): number[] {
+	return (Array.isArray(value) ? value : [value])
+		.filter((item) => !isNaN(parseInt(item)))
+		.map((item) => parseInt(item));
 }
 
 /**
@@ -54,9 +69,28 @@ function parseSource(source: LabVector | number[]) {
  */
 const handler = {
 	get(target: LabVector, accessor: string) {
-		const byIndex = handleIndexAccessors(target, accessor);
-		const byToken = handleTokenAccessors(target, accessor);
-		return byIndex ?? byToken ?? Reflect.get(target, accessor);
+		const byToken = handleTokenAccessors(accessor).map(
+			(index) => target.value[index]
+		);
+
+		const byIndex = handleIndexAccessors(accessor).map(
+			(index) => target.value[index]
+		);
+
+		return (
+			(byToken?.length && Vector(...byToken)) ||
+			(byIndex?.length && byIndex[0]) ||
+			Reflect.get(target, accessor)
+		);
+	},
+
+	set(target: LabVector, accessor: string, value: any) {
+		const byIndex = handleIndexAccessors(accessor);
+		byIndex?.length && (target.value[byIndex[0]] = parseValue(value)[0]);
+
+		return !byIndex?.length
+			? Reflect.set(target, accessor, parseValue(value))
+			: true;
 	},
 };
 

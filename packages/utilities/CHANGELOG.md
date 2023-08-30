@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.1.1
+
+### Patch Changes
+
+-   Fixed issue when settings values on `Vector`'s.
+
 ## 0.1.0
 
 ### Minor Changes
