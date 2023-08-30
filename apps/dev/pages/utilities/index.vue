@@ -27,14 +27,14 @@
 
 		<div id="lab-vector">
 			<h2>Lab.Vector</h2>
-			<pre v-text="`original: \t${vector}`"></pre>
+			<!-- <pre v-text="`original: \t${vector}`"></pre>
 			<pre v-text="`vector.xy: \t${vector.xy}`"></pre>
 			<pre v-text="`vector.zy: \t${vector.zy}`"></pre>
 			<pre v-text="`vector.rgb: \t${vector.rgb}`"></pre>
 			<pre v-text="`vector.abg: \t${vector.abg}`"></pre>
 			<pre v-text="`vector[2]: \t${vector[2]}`"></pre>
 			<pre v-text="`vector[3]: \t${vector[3]}`"></pre>
-			<pre v-text="`vector.value: \t[${vector.value}]`"></pre>
+			<pre v-text="`vector.value: \t[${vector.value}]`"></pre> -->
 		</div>
 	</div>
 </template>
@@ -44,7 +44,6 @@ import * as Lab from '@kinematic-lab/utilities';
 
 const clock = Lab.Clock();
 const bezier = Lab.CubicBezier(0.75, 0, 0.25, 1);
-const vector = Lab.Vector(4, 2, 1, 0.5);
 
 const delta = ref(0);
 const elapsed = ref(0);
