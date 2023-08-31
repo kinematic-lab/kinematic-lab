@@ -10,12 +10,19 @@ test('Lab.Vector: Operators', () => {
 });
 
 test('Lab.Vector: Interpolation', () => {
-	const vector = Vector(2, 3, 4);
-	const result = vector.interpolate([1, 4, 3], 0.1);
+	const v1 = Vector(2, 3, 4);
+	const r1 = v1.interpolate([1, 4, 3], 0.1);
 
-	expect(result.value[0]).toBeCloseTo(1.9);
-	expect(result.value[1]).toBeCloseTo(3.1);
-	expect(result.value[2]).toBeCloseTo(3.9);
+	expect(r1.value[0]).toBeCloseTo(1.9);
+	expect(r1.value[1]).toBeCloseTo(3.1);
+	expect(r1.value[2]).toBeCloseTo(3.9);
+
+	const v2 = Vector(2, 2, 2);
+	const r2 = v2.interpolate([0, 0, 0], 0.1);
+
+	expect(r2.value[0]).toBeCloseTo(1.8);
+	expect(r2.value[1]).toBeCloseTo(1.8);
+	expect(r2.value[2]).toBeCloseTo(1.8);
 });
 
 test('Lab.Vector: Normalise & distance', () => {

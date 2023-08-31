@@ -143,8 +143,9 @@ function Vector(...value: number[]): LabVector {
 
 			interpolate(v: LabVector | number[], t: number): LabVector {
 				const source = parseSource(v);
+
 				this.value.forEach((value, index) => {
-					if (source[index]) {
+					if (source[index] != null) {
 						this.value[index] = (1 - t) * value + t * source[index];
 					}
 				});

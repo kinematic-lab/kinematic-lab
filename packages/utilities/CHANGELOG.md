@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.1.3
+
+### Patch Changes
+
+-   Fixed issue where nothing would happen, when interpolating a `Vector` toward `0`.
+
 ## 0.1.2
 
 ### Patch Changes
