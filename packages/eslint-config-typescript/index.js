@@ -30,6 +30,7 @@ module.exports = {
 		'no-undef': 0,
 
 		'@typescript-eslint/triple-slash-reference': 0,
+		'@typescript-eslint/no-explicit-any': 0,
 		'@typescript-eslint/no-var-requires': 1,
 		'@typescript-eslint/no-unused-vars': 2,
 	},

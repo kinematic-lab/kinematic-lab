@@ -1,5 +1,11 @@
 # @kinematic-lab/eslint-config-typescript
 
+## 0.1.0
+
+### Minor Changes
+
+-   Added `'@typescript-eslint/no-explicit-any': 0`.
+
 ## 0.0.3
 
 ### Patch Changes
