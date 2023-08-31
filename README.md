@@ -41,6 +41,8 @@ Kinematic Lab provides the following packages:
 
 ## Showcase
 
-\-
+-   [After August](https://afteraugust.org/).
 
 <br />
+
+More coming soon 👀
