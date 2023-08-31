@@ -1,5 +1,11 @@
 # @kinematic-lab/utilities
 
+## 0.1.2
+
+### Patch Changes
+
+-   Fixed an issue where getting values in `Vector`'s' by index, fx. `v[0]`, would result in `undefined` if the value were `0`.
+
 ## 0.1.1
 
 ### Patch Changes

@@ -77,20 +77,26 @@ const handler = {
 			(index) => target.value[index]
 		);
 
-		return (
-			(byToken?.length && Vector(...byToken)) ||
-			(byIndex?.length && byIndex[0]) ||
-			Reflect.get(target, accessor)
-		);
+		if (byToken?.length) {
+			return Vector(...byToken);
+		}
+
+		if (byIndex?.length) {
+			return byIndex[0];
+		}
+
+		return Reflect.get(target, accessor);
 	},
 
-	set(target: LabVector, accessor: string, value: any) {
+	set(target: LabVector, accessor: string, value: any, ...args: any[]) {
 		const byIndex = handleIndexAccessors(accessor);
-		byIndex?.length && (target.value[byIndex[0]] = parseValue(value)[0]);
 
-		return !byIndex?.length
-			? Reflect.set(target, accessor, parseValue(value))
-			: true;
+		if (byIndex?.length) {
+			[target.value[byIndex[0]]] = parseValue(value);
+			return true;
+		}
+
+		return Reflect.set(target, accessor, parseValue(value), ...args);
 	},
 };
 
