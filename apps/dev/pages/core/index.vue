@@ -1,5 +1,5 @@
 <template>
-	<div class="p-utilities">
+	<div class="p-core">
 		<h1>@kinematic-lab/core</h1>
 
 		<div id="lab-clock">
@@ -27,22 +27,17 @@
 
 		<div id="lab-vector">
 			<h2>Lab.Vector</h2>
-			<pre v-text="`original: \t${vector}`"></pre>
-			<pre v-text="`vector.xy: \t${vector.xy}`"></pre>
-			<pre v-text="`vector.zy: \t${vector.zy}`"></pre>
-			<pre v-text="`vector.rgb: \t${vector.rgb}`"></pre>
-			<pre v-text="`vector.abg: \t${vector.abg}`"></pre>
-			<pre v-text="`vector[2]: \t${vector[2]}`"></pre>
-			<pre v-text="`vector[3]: \t${vector[3]}`"></pre>
+			<pre v-text="`original: \t\t${vector}`"></pre>
+			<pre v-text="`vector.value: \t\t[${vector.value}]`"></pre>
+			<pre v-text="`vector.value[2]: \t${vector.value[2]}`"></pre>
+			<pre v-text="`vector.value[3]: \t${vector.value[3]}`"></pre>
 			<pre
 				v-text="
-					`interpolated: \t${vector.xy.interpolate(
-						Lab.Vector(0, 0),
-						0.1
-					)}`
+					`interpolated: \t\t${vector
+						.clone()
+						.interpolate(Lab.Vector(0, 0, 0, 0), 0.1)}`
 				"
 			></pre>
-			<pre v-text="`vector.value: \t[${vector.value}]`"></pre>
 		</div>
 	</div>
 </template>
@@ -73,7 +68,7 @@ onMounted(() => {
 </script>
 
 <style lang="postcss">
-.p-utilities > div:not(:first-child) {
+.p-core > div:not(:first-child) {
 	margin-top: 48px;
 
 	& > div:not(:first-child) {
@@ -81,11 +76,11 @@ onMounted(() => {
 	}
 }
 
-.p-utilities pre {
+.p-core pre {
 	line-height: 1.5;
 }
 
-.p-utilities #lab-cubic-bezier > .boxed {
+.p-core #lab-cubic-bezier > .boxed {
 	margin-top: 24px;
 	padding: 24px 32px;
 	width: calc(320px + 48px);
