@@ -6,10 +6,10 @@ interface LabVector {
 	multiply: (vector: LabVector | number[]) => LabVector;
 	divide: (vector: LabVector | number[]) => LabVector;
 	interpolate: (vector: LabVector | number[], t: number) => LabVector;
+	getDistance: () => number;
 
 	normalise: () => LabVector;
 	clone: () => LabVector;
 
-	getDistance: () => number;
 	toString: () => string;
 }

@@ -25,7 +25,7 @@ test('Lab.Vector: Interpolation', () => {
 	expect(r2.value[2]).toBeCloseTo(1.8);
 });
 
-test('Lab.Vector: Normalise & distance', () => {
+test('Lab.Vector: Normalise & Distance', () => {
 	const a = Vector(2, 2);
 	const b = a.clone().normalise();
 
@@ -40,26 +40,3 @@ test('Lab.Vector: Cloning', () => {
 	expect(a.value).toStrictEqual([1, 2, 3]);
 	expect(b.value).toStrictEqual([2, 3, 4]);
 });
-
-// test('Lab.Vector: Setters', () => {
-// 	const vector = Vector(2, 3, 4);
-
-// 	vector[0] = 0;
-// 	vector[1] = 1;
-// 	vector[2] = 2;
-
-// 	expect(vector[0]).toBe(0);
-// 	expect(vector[1]).toBe(1);
-// 	expect(vector[2]).toBe(2);
-
-// 	vector.value[0] = 9;
-// 	vector.value[1] = 8;
-// 	vector.value[2] = 7;
-
-// 	expect(vector[0]).toBe(9);
-// 	expect(vector[1]).toBe(8);
-// 	expect(vector[2]).toBe(7);
-
-// 	vector.value = [3, 2, 1];
-// 	expect(vector.value).toStrictEqual([3, 2, 1]);
-// });
