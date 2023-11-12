@@ -1,11 +1,10 @@
 {
-	"name": "core",
+	"name": "kinematic-lab",
 	"version": "0.0.0",
 	"private": false,
-	"packageManager": "pnpm@7.15.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kinematic-lab/TurboBoilerplate.git"
+		"url": "https://github.com/kinematic-lab/kinematic-lab.git"
 	},
 	"workspaces": [
 		"apps/*",
@@ -16,7 +15,8 @@
 		"email": "ala@limbo.works"
 	},
 	"engines": {
-		"node": ">=20.0.0 <21.0.0"
+		"node": ">=20.0.0 <21.0.0",
+		"pnpm": ">=8.0.0 <9.0.0"
 	},
 	"scripts": {
 		"new": "pnpm plop && pnpm install && pnpm run lint",

@@ -1,4 +1,4 @@
-# @kinematic-lab/utilities
+# @kinematic-lab/core
 
 ## 0.1.3
 
@@ -23,7 +23,7 @@
 ### Minor Changes
 
 -   287be63: Implemented `LabVector` module.
-    See documentation [here](https://github.com/kinematic-lab/core/blob/main/packages/utilities/docs/lab-vector.md).
+    See documentation [here](https://github.com/kinematic-lab/kinematic-lab/blob/main/packages/core/docs/lab-vector.md).
 
 ## 0.0.5
 
@@ -61,14 +61,14 @@
 
     -   **Function: `LabCubicBezier`.**
 
-        See documentation [here](https://github.com/kinematic-lab/core/blob/main/packages/utilities/docs/lab-cubic-bezier.md).<br />
+        See documentation [here](https://github.com/kinematic-lab/kinematic-lab/blob/main/packages/core/docs/lab-cubic-bezier.md).<br />
         Returns `LabShapingFunction`, which is defined as _`f(x[0;1]) => y[0;1]`_.
 
         <br />
 
     -   **Function: `LabClock`.**
 
-        See documentation [here](https://github.com/kinematic-lab/core/blob/main/packages/utilities/docs/lab-clock.md).<br />
+        See documentation [here](https://github.com/kinematic-lab/kinematic-lab/blob/main/packages/core/docs/lab-clock.md).<br />
         Returns `LabClock`, which contains:
 
         -   Field: `isPerformanceSupported`.

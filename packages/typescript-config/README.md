@@ -17,7 +17,7 @@ The `@kinematic-lab/typescript-config` contains the default TypeScript configura
 
 ## Relevant links
 
-See changelogs: [here](https://github.com/kinematic-lab/core/blob/main/packages/typescript-config/CHANGELOG.md).<br />
+See changelogs: [here](https://github.com/kinematic-lab/kinematic-lab/blob/main/packages/typescript-config/CHANGELOG.md).<br />
 See npm: [here](https://www.npmjs.com/package/@kinematic-lab/typescript-config).
 
 <br />

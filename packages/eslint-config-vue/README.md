@@ -19,7 +19,7 @@
 
 ## Relevant links
 
-See changelogs: [Here](https://github.com/kinematic-lab/core/blob/main/packages/eslint-config-vue/CHANGELOG.md).<br />
+See changelogs: [Here](https://github.com/kinematic-lab/kinematic-lab/blob/main/packages/eslint-config-vue/CHANGELOG.md).<br />
 See npm: [here](https://www.npmjs.com/package/@kinematic-lab/eslint-config-vue).
 
 <br />

@@ -1,6 +1,6 @@
 <template>
 	<div class="p-utilities">
-		<h1>@kinematic-lab/utilities</h1>
+		<h1>@kinematic-lab/core</h1>
 
 		<div id="lab-clock">
 			<h2>Lab.Clock</h2>
@@ -48,7 +48,7 @@
 </template>
 
 <script setup>
-import * as Lab from '@kinematic-lab/utilities';
+import * as Lab from '@kinematic-lab/core';
 
 const clock = Lab.Clock();
 const vector = Lab.Vector(1, 2, 3, 4);

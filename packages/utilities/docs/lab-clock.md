@@ -27,7 +27,7 @@ For general usage, see example below.
 <br />
 
 ```javascript
-import { Clock } from '@kinematic-lab/utilities';
+import { Clock } from '@kinematic-lab/core';
 
 const clock = Clock();
 

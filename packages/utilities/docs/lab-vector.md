@@ -26,7 +26,7 @@ Note that the documentation for this module is not complete and may lack some in
 **Basic usage:**
 
 ```javascript
-import * as Lab from '@kinematic-lab/utilities';
+import * as Lab from '@kinematic-lab/core';
 
 /**
  * New instance of the nth-dimensional vector.

@@ -23,7 +23,7 @@ Note that the documentation for this module is not complete and may lack some in
 **Basic usage:**
 
 ```javascript
-import * as Lab from '@kinematic-lab/utilities';
+import * as Lab from '@kinematic-lab/core';
 
 const bezier = Lab.CubicBezier(0.8, 0.2, 0.2, 0.8);
 bezier(0.2); // equals ~0.071
@@ -34,7 +34,7 @@ bezier(0.2); // equals ~0.071
 **With options:**
 
 ```typescript
-import * as Lab from '@kinematic-lab/utilities';
+import * as Lab from '@kinematic-lab/core';
 
 const bezier = Lab.CubicBezier(0.8, 0.2, 0.2, 0.8, {
 	precision: 256,
