@@ -2,7 +2,11 @@
 
 Utilties for working with the future `@kinematic-lab` packages and general transitions in JavaScript ⚡
 
-Note that `@kinematic-lab/core` is **not** a full framework for crafting animations, but instead a set of tools focusing on quality-of-life when working with pure JavaScript transitions, from bezier implementations to vector implementations.
+<br />
+
+> [!WARNING]  
+> This packages were previously named `@kinematic-lab/utilities`, but have since been renamed to `@kinematic-lab/core`.<br />
+> The `@kinematic-lab/utilities` will still be available for some time, but we recommend making the switch as soon as possible.
 
 <br />
 
