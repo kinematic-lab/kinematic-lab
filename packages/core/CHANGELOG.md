@@ -1,5 +1,11 @@
 # @kinematic-lab/core
 
+## 0.2.0
+
+### Minor Changes
+
+-   Removed proxy functionality from `Lab.Vector`.
+
 ## 0.1.3
 
 ### Patch Changes
