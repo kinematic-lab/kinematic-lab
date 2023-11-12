@@ -15,6 +15,9 @@
 		"name": "Aske Kjøller Lange",
 		"email": "ala@limbo.works"
 	},
+	"engines": {
+		"node": ">=20.0.0 <21.0.0"
+	},
 	"scripts": {
 		"new": "pnpm plop && pnpm install && pnpm run lint",
 		"prepare": "husky install",
@@ -30,9 +33,6 @@
 		"changeset:create-empty": "pnpm changeset --empty",
 		"changeset:version": "pnpm changeset version",
 		"changeset:publish": "turbo run build lint test && pnpm changeset publish"
-	},
-	"engines": {
-		"node": ">=v16.15.0"
 	},
 	"devDependencies": {
 		"@changesets/cli": "^2.26.1",
