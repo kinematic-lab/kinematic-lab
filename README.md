@@ -27,6 +27,12 @@
 Kinematic Lab provides the following packages:
 
 -   [**`@kinematic-lab/core`**](/packages/core/)
+-   [**`@kinematic-lab/nuxt`**](/packages/nuxt/)
+
+<br />
+
+And the following configuration packages (mainly for use internally): 
+
 -   [**`@kinematic-lab/eslint-config-typescript`**](/packages/eslint-config-typescript/)
 -   [**`@kinematic-lab/eslint-config-vue`**](/packages/eslint-config-vue/)
 -   [**`@kinematic-lab/typescript-config`**](/packages/typescript-config/)
