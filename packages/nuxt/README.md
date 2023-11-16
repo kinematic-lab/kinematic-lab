@@ -18,7 +18,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 > [!WARNING]  
 > This package is still in alpha. We recommend only using it if you
-> want to test it out early, or help developing it.
+> want to test it out early, or help develop it.
 
 <br />
 
@@ -37,7 +37,8 @@ yarn add --dev @kinematic-lab/nuxt
 npm install --save-dev @kinematic-lab/nuxt
 ```
 
-2. Add `@kinematic-lab/nuxt` to the `modules` section of `nuxt.config.ts`
+<br />
+1. Add `@kinematic-lab/nuxt` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
@@ -45,6 +46,7 @@ export default defineNuxtConfig({
 });
 ```
 
+<br />
 That's it! You can now use `@kinematic-lab/nuxt` in your Nuxt app ✨
 
 <!-- Badges -->
