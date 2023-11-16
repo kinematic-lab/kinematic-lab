@@ -1,10 +1,18 @@
-export default (
+import type { LabShapingFunction } from './types';
+
+export interface LabCubicBezierOptions {
+	precision?: number;
+	maxIterations?: number;
+	maxErrorMargin?: number;
+}
+
+function CubicBezier(
 	x0: number,
 	y0: number,
 	x1: number,
 	y1: number,
 	options?: LabCubicBezierOptions
-): LabShapingFunction => {
+): LabShapingFunction {
 	const precision = options?.precision ?? 256;
 	const maxIterations = options?.maxIterations ?? 32;
 	const maxErrorMargin = options?.maxErrorMargin ?? 1 / 10 ** 8;
@@ -52,4 +60,6 @@ export default (
 		const percentage = (x - x0) / (x1 - x0) || 0;
 		return (y1 - y0) * percentage + y0;
 	};
-};
+}
+
+export default CubicBezier;

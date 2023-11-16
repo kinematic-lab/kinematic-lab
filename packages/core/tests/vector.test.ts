@@ -27,7 +27,7 @@ test('Lab.Vector: Interpolation', () => {
 
 test('Lab.Vector: Normalise & Distance', () => {
 	const a = Vector(2, 2);
-	const b = a.clone().normalise();
+	const b = Vector(2, 2).normalise();
 
 	expect(a.getDistance()).toBeCloseTo(2.83);
 	expect(b.getDistance()).toBeCloseTo(1);

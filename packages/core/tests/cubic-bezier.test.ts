@@ -3,7 +3,7 @@ import { CubicBezier } from '../src/index';
 test('Lab.CubicBezier: General', () => {
 	/**
 	 * Generated from running a bezier with the handles
-	 * (0.8, 0.2) and (0.2, 0.8) after the module where
+	 * (0.8, 0.2) and (0.2, 0.8) after the module were
 	 * initially completed.
 	 */
 	const targets = {
