@@ -1,5 +1,9 @@
 # @kinematic-lab/eslint-config-typescript <!-- omit in toc -->
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+
 `@kinematic-lab/eslint-config-typescript` contains the default TypeScript ESLint configuration for kinematic-labs projects.
 
 <br />
@@ -79,3 +83,12 @@ module.exports = {
 	// other configuration
 }
 ```
+
+<!-- Badges -->
+
+[npm-version-src]: https://img.shields.io/npm/v/@kinematic-lab/eslint-config-typescript/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@kinematic-lab/eslint-config-typescript
+[npm-downloads-src]: https://img.shields.io/npm/dm/@kinematic-lab/eslint-config-typescript.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@kinematic-lab/eslint-config-typescript
+[license-src]: https://img.shields.io/npm/l/@kinematic-lab/eslint-config-typescript.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@kinematic-lab/eslint-config-typescript
