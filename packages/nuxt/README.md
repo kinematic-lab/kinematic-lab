@@ -38,7 +38,8 @@ npm install --save-dev @kinematic-lab/nuxt
 ```
 
 <br />
-1. Add `@kinematic-lab/nuxt` to the `modules` section of `nuxt.config.ts`
+
+2. Add `@kinematic-lab/nuxt` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
