@@ -1,4 +1,6 @@
-export default (): LabClock => {
+import type { LabClock } from './types';
+
+function Clock(): LabClock {
 	const isPerformanceSupported = typeof performance !== 'undefined';
 	const timeStart = (isPerformanceSupported ? performance : Date).now();
 	const timePrevious = timeStart;
@@ -36,4 +38,6 @@ export default (): LabClock => {
 			return (this.isPerformanceSupported ? performance : Date).now();
 		},
 	};
-};
+}
+
+export default Clock;

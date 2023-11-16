@@ -1,5 +1,11 @@
 # @kinematic-lab/core
 
+## 0.2.1
+
+### Patch Changes
+
+-   Restructured package, made exports for `.mjs`, `.js` and type file, and fixed an issue where the entire package were being exported.
+
 ## 0.2.0
 
 ### Minor Changes

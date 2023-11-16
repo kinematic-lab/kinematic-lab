@@ -1,3 +1,5 @@
+import type { LabVector } from './types';
+
 function parseSource(source: LabVector | number[]): number[] {
 	return Array.isArray(source) ? source : source.value;
 }
@@ -44,10 +46,12 @@ function Vector(...args: number[]): LabVector {
 
 		interpolate(v: LabVector | number[], t: number): LabVector {
 			const source = parseSource(v);
+			const delta = Math.min(Math.max(t, 0), 1);
 
 			this.value.forEach((value, index) => {
 				if (source[index] != null) {
-					this.value[index] = (1 - t) * value + t * source[index];
+					this.value[index] =
+						(1 - delta) * value + delta * source[index];
 				}
 			});
 
@@ -63,8 +67,13 @@ function Vector(...args: number[]): LabVector {
 			return this;
 		},
 
-		getDistance() {
-			const sum = this.value.reduce((acc, cur) => acc + cur * cur, 0);
+		getDistance(v?: LabVector): number {
+			const target = v ?? Vector(...new Array(this.value.length).fill(0));
+			const sum = this.value.reduce(
+				(acc, cur, index) => acc + (target.value[index] - cur) ** 2,
+				0
+			);
+
 			return Math.sqrt(sum);
 		},
 

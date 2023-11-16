@@ -1,5 +1,6 @@
-import CubicBezier from './lab-cubic-bezier';
-import Clock from './lab-clock';
-import Vector from './lab-vector';
+import CubicBezier from './cubic-bezier';
+import Clock from './clock';
+import Vector from './vector';
 
 export { CubicBezier, Clock, Vector };
+export * from './types';
