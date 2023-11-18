@@ -15,7 +15,7 @@
 
 <script setup>
 const mouseActual = useVector(0, 0);
-const mouseTarget = useMouse(true);
+const mouseTarget = useMouse([0.75, 0.75], true);
 onUpdate((d) => mouseActual.interpolate(mouseTarget, d * 0.0075));
 </script>
 

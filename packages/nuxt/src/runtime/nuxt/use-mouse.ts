@@ -2,9 +2,9 @@ import { onMounted, onUnmounted } from 'vue';
 import { useDimensions } from './use-dimensions';
 import { useVector } from '../core/vector';
 
-export function useMouse(normalise?: boolean) {
+export function useMouse(defaults?: [number, number], normalise?: boolean) {
 	const dimensions = useDimensions();
-	const mouse = useVector(0, 0);
+	const mouse = useVector(...(defaults ?? [0.5, 0.5]));
 
 	const onMouseMove = (event: any) => {
 		mouse.value[0] = event.clientX / (normalise ? dimensions.value[0] : 1);
