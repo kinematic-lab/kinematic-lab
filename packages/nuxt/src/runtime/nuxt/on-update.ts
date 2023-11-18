@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, watch } from 'vue';
+import { onMounted, onUnmounted, watch, ref } from 'vue';
 import * as Lab from '@kinematic-lab/core';
 
 type LabUpdateCallback = (delta: number, elapsed: number) => void;

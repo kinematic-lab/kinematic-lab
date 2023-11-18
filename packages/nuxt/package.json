@@ -1,6 +1,6 @@
 {
 	"name": "@kinematic-lab/nuxt",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Nuxt layer for working with Kinematic Lab packages",
 	"license": "MIT",
 	"repository": {
