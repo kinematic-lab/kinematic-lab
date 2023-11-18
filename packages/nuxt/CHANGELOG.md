@@ -1,5 +1,11 @@
 # @kinematic-lab/nuxt
 
+## 0.0.3
+
+### Patch Changes
+
+-   286ca19: Added `defaults` argument for `use-mouse` composable.
+
 ## 0.0.2
 
 ### Patch Changes
