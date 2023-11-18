@@ -9,15 +9,7 @@ Note that the documentation for this module is not complete and may lack some in
 
 ## Table of contents <!-- omit in toc -->
 
--   [Knowns issues](#knowns-issues)
 -   [Example](#example)
-
-<br />
-
-## Knowns issues
-
--   Token accessors (ie. `.xyz`, `.rgba`, etc.) doesn't work well with TypeScript - caused by proxying the values.
--   Index accessors (ie. `[0]`, `[1]`, etc.) doesn't work well with TypeScript - caused by proxying the values.
 
 <br />
 
