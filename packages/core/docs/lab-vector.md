@@ -9,15 +9,7 @@ Note that the documentation for this module is not complete and may lack some in
 
 ## Table of contents <!-- omit in toc -->
 
--   [Knowns issues](#knowns-issues)
 -   [Example](#example)
-
-<br />
-
-## Knowns issues
-
--   Token accessors (ie. `.xyz`, `.rgba`, etc.) doesn't work well with TypeScript - caused by proxying the values.
--   Index accessors (ie. `[0]`, `[1]`, etc.) doesn't work well with TypeScript - caused by proxying the values.
 
 <br />
 
@@ -36,24 +28,11 @@ import * as Lab from '@kinematic-lab/core';
 const vector = Lab.Vector(2, 3, 4);
 
 /**
- * Vector values can be accessed via indexes, which returns
- * the corresponding number values, or via the `.value` property
+ * Vector values can be accessed via the `.value` property
  * which contains all values as a number array.
  */
-vector[0]; // 2
-vector[1]; // 3
-vector[2]; // 4
 vector.value; // [2, 3, 4]
-
-/**
- * Vector values can be accessed via `xyz`, `rgba` or any subset
- * of these. This returns a new vector containing the
- * corresponding subset of values.
- */
-vector.xy; // Lab.Vector(2, 3)
-vector.zy; // Lab.Vector(4, 3)
-vector.rg; // Lab.Vector(2, 3)
-vector.bg; // Lab.Vector(4, 3);
+vector.value[0]; // 2
 
 /**
  * All of the following actions mutates the vector itself,
