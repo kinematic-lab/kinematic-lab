@@ -2,6 +2,7 @@
 	<div class="c-app">
 		<pre v-text="`Mouse Actual: \t\t${mouseTarget}`" />
 		<pre v-text="`Mouse Interpolated: \t${mouseActual}`" />
+		<pre v-text="`Vieeport: \t\t${viewport}`" />
 
 		<div
 			id="cursor"
@@ -16,6 +17,8 @@
 <script setup>
 const mouseActual = useVector(0, 0);
 const mouseTarget = useMouse([0.75, 0.75], true);
+const viewport = useViewport();
+
 onUpdate((d) => mouseActual.interpolate(mouseTarget, d * 0.0075));
 </script>
 

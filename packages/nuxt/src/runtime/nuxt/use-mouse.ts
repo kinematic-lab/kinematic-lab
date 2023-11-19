@@ -1,14 +1,14 @@
 import { onMounted, onUnmounted } from 'vue';
-import { useDimensions } from './use-dimensions';
+import { useViewport } from './use-viewport';
 import { useVector } from '../core/vector';
 
 export function useMouse(defaults?: [number, number], normalise?: boolean) {
-	const dimensions = useDimensions();
+	const viewport = useViewport();
 	const mouse = useVector(...(defaults ?? [0.5, 0.5]));
 
 	const onMouseMove = (event: any) => {
-		mouse.value[0] = event.clientX / (normalise ? dimensions.value[0] : 1);
-		mouse.value[1] = event.clientY / (normalise ? dimensions.value[1] : 1);
+		mouse.value[0] = event.clientX / (normalise ? viewport.value[0] : 1);
+		mouse.value[1] = event.clientY / (normalise ? viewport.value[1] : 1);
 	};
 
 	onMounted(() => window.addEventListener('mousemove', onMouseMove));
