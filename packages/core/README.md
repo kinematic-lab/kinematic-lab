@@ -78,7 +78,6 @@ See full documentation: [here](https://github.com/kinematic-lab/kinematic-lab/tr
 ### Lab.Vector
 
 See full documentation: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-vector.md).
--->
 
 <!-- Badges -->
 
