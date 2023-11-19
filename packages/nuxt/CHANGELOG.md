@@ -1,5 +1,11 @@
 # @kinematic-lab/nuxt
 
+## 0.1.0
+
+### Minor Changes
+
+-   0c4f048: Renamed `use-dimensions` to `use-viewport`.
+
 ## 0.0.3
 
 ### Patch Changes
