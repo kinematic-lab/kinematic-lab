@@ -21,7 +21,7 @@
 		"dist"
 	],
 	"scripts": {
-		"postinstall": "nuxt prepare",
+		"prepare": "nuxt prepare",
 		"build": "nuxt-module-build build",
 		"dev": "nuxi dev playground",
 		"dev:build": "nuxi build playground",
