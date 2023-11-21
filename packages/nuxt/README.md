@@ -19,7 +19,7 @@
 -   [Installation](#installation)
 -   [Composables](#composables)
     -   [General](#general)
-    -   [From `@kinematic-lab/core`](#from-kinematic-labcore)
+    -   [From @kinematic-lab/core](#from-kinematic-labcore)
 
 <br />
 
@@ -73,7 +73,7 @@ That's it! You can now use `@kinematic-lab/nuxt` in your Nuxt app ✨
 -   **useLabMouse:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-mouse.md).
 -   **useLabViewport:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-viewport.md).
 
-### From `@kinematic-lab/core`
+### From @kinematic-lab/core
 
 -   **useLabClock:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-clock.md).
 -   **useLabCubicBezier:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-cubic-bezier.md).
