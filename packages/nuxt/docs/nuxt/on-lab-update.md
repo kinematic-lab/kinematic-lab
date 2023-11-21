@@ -1,7 +1,8 @@
 ## `onLabUpdate` <!-- omit in toc -->
 
 Composable for creating update loops.<br />
-Used `Clock` from `@kinematic-lab/core` for `delta` and `elapsed` values with a precision down to 5μs.
+Used `Clock` from `@kinematic-lab/core` for `delta` and `elapsed` values with a precision down to 5μs.<br />
+Note that the documentation for this module is not complete and may lack some information.
 
 <br />
 

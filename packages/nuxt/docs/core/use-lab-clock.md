@@ -1,6 +1,7 @@
 ## `useLabClock` <!-- omit in toc -->
 
 Module for getting precise timestamps, using the [Performance API](https://developer.mozilla.org/en-US/docs/Web/API/Performance) for precision down to 5 μs.<br />
+Note that the documentation for this module is not complete and may lack some information.<br />
 See full documentation from `core`: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-clock.md).
 <br />
 
