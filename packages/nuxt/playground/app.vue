@@ -2,7 +2,9 @@
 	<div class="c-app">
 		<pre v-text="`Mouse Actual: \t\t${mouseTarget}`" />
 		<pre v-text="`Mouse Interpolated: \t${mouseActual}`" />
-		<pre v-text="`Vieeport: \t\t${viewport}`" />
+		<pre v-text="`Viewport: \t\t${viewport}`" />
+		<pre v-text="`Eased: \t\t\t${bezier(0.75)}`" />
+		<pre v-text="`Clock: \t\t\t${clock.getElapsedTime()}`" />
 
 		<div
 			id="cursor"
@@ -15,11 +17,20 @@
 </template>
 
 <script setup>
-const mouseActual = useVector(0, 0);
-const mouseTarget = useMouse([0.75, 0.75], true);
-const viewport = useViewport();
+const clock = useLabClock();
+const viewport = useLabViewport();
+const bezier = useLabCubicBezier(0.8, 0, 0.2, 1);
 
-onUpdate((d) => mouseActual.interpolate(mouseTarget, d * 0.0075));
+const mouseActual = useLabVector(0, 0);
+const mouseTarget = useLabMouse([0.75, 0.75], true);
+const { start, stop } = onLabUpdate((delta) => {
+	mouseActual.interpolate(mouseTarget, delta * 0.0075);
+});
+
+onMounted(() => {
+	setTimeout(stop, 2000);
+	setTimeout(start, 4000);
+});
 </script>
 
 <style lang="postcss">

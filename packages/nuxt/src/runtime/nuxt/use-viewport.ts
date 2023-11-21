@@ -1,8 +1,8 @@
 import { onMounted, onUnmounted } from 'vue';
-import { useVector } from '../core/vector';
+import { useLabVector } from '../core/vector';
 
-export function useViewport() {
-	const viewport = useVector(0, 0);
+export function useLabViewport() {
+	const viewport = useLabVector(0, 0);
 
 	const onResize = () => {
 		viewport.value[0] = window.innerWidth;

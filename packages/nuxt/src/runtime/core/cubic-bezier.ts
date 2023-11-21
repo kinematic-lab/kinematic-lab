@@ -1,1 +1,1 @@
-export { CubicBezier as useCubicBezier } from '@kinematic-lab/core';
+export { CubicBezier as useLabCubicBezier } from '@kinematic-lab/core';
