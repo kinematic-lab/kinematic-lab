@@ -1,5 +1,11 @@
 # @kinematic-lab/nuxt
 
+## 0.2.0
+
+### Minor Changes
+
+-   ce236a3: Prefixed all composable names with `Lab` to avoid collision with other packages or nuxt functionality. So `useVector` becomes `useLabVector`, `onUpdate` becomes `onLabUpdate`, and so on.
+
 ## 0.1.0
 
 ### Minor Changes
