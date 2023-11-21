@@ -9,7 +9,7 @@ interface LabUpdateControls {
 	start: () => void;
 }
 
-export function onUpdate(callback: LabUpdateCallback): LabUpdateControls {
+export function onLabUpdate(callback: LabUpdateCallback): LabUpdateControls {
 	const clock = Lab.Clock();
 	const isRunning = ref(false);
 
@@ -18,7 +18,7 @@ export function onUpdate(callback: LabUpdateCallback): LabUpdateControls {
 		isRunning.value && window.requestAnimationFrame(onUpdate);
 	};
 
-	watch(isRunning, (v) => v && onUpdate());
+	watch(isRunning, (v) => v && (clock.getDelta(), onUpdate()));
 	const stop = () => (isRunning.value = false);
 	const start = () => (isRunning.value = true);
 

@@ -1,10 +1,10 @@
 import { onMounted, onUnmounted } from 'vue';
-import { useViewport } from './use-viewport';
-import { useVector } from '../core/vector';
+import { useLabViewport } from './use-viewport';
+import { useLabVector } from '../core/vector';
 
-export function useMouse(defaults?: [number, number], normalise?: boolean) {
-	const viewport = useViewport();
-	const mouse = useVector(...(defaults ?? [0.5, 0.5]));
+export function useLabMouse(defaults?: [number, number], normalise?: boolean) {
+	const viewport = useLabViewport();
+	const mouse = useLabVector(...(defaults ?? [0.5, 0.5]));
 
 	const onMouseMove = (event: any) => {
 		mouse.value[0] = event.clientX / (normalise ? viewport.value[0] : 1);

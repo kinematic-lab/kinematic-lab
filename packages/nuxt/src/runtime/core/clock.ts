@@ -1,1 +1,1 @@
-export { Clock as useClock } from '@kinematic-lab/core';
+export { Clock as useLabClock } from '@kinematic-lab/core';

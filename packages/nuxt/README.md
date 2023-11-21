@@ -1,13 +1,4 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: @kinematic-lab/nuxt
-- Package name: @kinematic-lab/nuxt
-- Description: My new Nuxt module
--->
-
-# @kinematic-lab/nuxt
+# @kinematic-lab/nuxt <!-- omit in toc -->
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -19,6 +10,16 @@ Find and replace all on all files (CMD+SHIFT+F):
 > [!WARNING]  
 > This package is still in alpha. We recommend only using it if you<br />
 > want to test it out early, or help develop it.
+
+<br />
+
+## Table of contents <!-- omit in toc -->
+
+-   [Relevant links](#relevant-links)
+-   [Installation](#installation)
+-   [Composables](#composables)
+    -   [General](#general)
+    -   [From @kinematic-lab/core](#from-kinematic-labcore)
 
 <br />
 
@@ -64,32 +65,19 @@ That's it! You can now use `@kinematic-lab/nuxt` in your Nuxt app ✨
 
 ## Composables
 
-### onUpdate
+`@kinematic-lab/nuxt` provides the following composables:
 
-Missing documention.
+### General
 
-### useMouse
+-   **onLabUpdate:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/on-lab-update.md).
+-   **useLabMouse:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-mouse.md).
+-   **useLabViewport:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-viewport.md).
 
-Missing documention.
+### From @kinematic-lab/core
 
-### useDimensions
-
-Missing documention.
-
-### useClock
-
-Functions the same way as `Clock` from `@kinematic-lab/core`.<br />
-See documentation from `core`: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-clock.md).
-
-### useCubicBezier
-
-Functions the same way as `CubicBezier` from `@kinematic-lab/core`.<br />
-See documentation from `core`: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-cubic-bezier.md).
-
-### useVector
-
-Functions the same way as `Vector` from `@kinematic-lab/core`, but returns a reactive object.<br />
-See documentation from `core`: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-vector.md).
+-   **useLabClock:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-clock.md).
+-   **useLabCubicBezier:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-cubic-bezier.md).
+-   **useLabVector:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-vector.md).
 
 <!-- Badges -->
 
