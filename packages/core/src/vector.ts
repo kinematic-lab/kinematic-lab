@@ -26,19 +26,21 @@ function Vector(...args: number[]): LabVector {
 			return this;
 		},
 
-		multiply(v: LabVector | number[]): LabVector {
-			const source = parseSource(v);
+		multiply(v: LabVector | number[] | number): LabVector {
+			const source = typeof v !== 'number' ? parseSource(v) : v;
 			this.value.forEach((value, index) => {
-				this.value[index] = value * source[index];
+				this.value[index] =
+					value * (Array.isArray(source) ? source[index] : source);
 			});
 
 			return this;
 		},
 
-		divide(v: LabVector | number[]): LabVector {
-			const source = parseSource(v);
+		divide(v: LabVector | number[] | number): LabVector {
+			const source = typeof v !== 'number' ? parseSource(v) : v;
 			this.value.forEach((value, index) => {
-				this.value[index] = value / source[index];
+				this.value[index] =
+					value / (Array.isArray(source) ? source[index] : source);
 			});
 
 			return this;
