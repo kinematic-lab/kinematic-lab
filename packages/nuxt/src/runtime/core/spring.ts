@@ -1,5 +1,5 @@
 export {
 	spring,
-	LabSpring as useLabSpring,
-	LabSpringSet as useLabSpringSet,
+	Spring as useLabSpring,
+	SpringSet as useLabSpringSet,
 } from '@kinematic-lab/core';
