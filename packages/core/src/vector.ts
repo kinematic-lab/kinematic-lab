@@ -1,9 +1,5 @@
 import type { LabVector } from './types';
 
-function parseSource(source: LabVector | number[]): number[] {
-	return Array.isArray(source) ? source : source.value;
-}
-
 function Vector(...args: number[]): LabVector {
 	return {
 		value: args,

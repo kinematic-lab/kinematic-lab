@@ -1,4 +1,4 @@
-import Vector from './vector';
+import { parseVector } from './utils';
 import type { LabShapingFunction, LabVector } from './types';
 
 export interface TimelineStep {
@@ -7,60 +7,45 @@ export interface TimelineStep {
 	easing?: LabShapingFunction;
 }
 
-interface TimelineStepInternal {
-	value: LabVector;
-	to: number;
-	easing?: LabShapingFunction;
-	weight?: number;
-}
-
-function parseVector(value: LabVector | number[] | number): LabVector {
-	typeof value === 'number' && (value = Vector(value));
-	Array.isArray(value) && (value = Vector(...value));
-	return value;
-}
-
 function Timeline(
 	from: LabVector | number[] | number,
 	steps: TimelineStep[]
 ): (x: number) => LabVector {
-	from = parseVector(from);
-
-	const weight = steps.reduce((acc, { weight }) => acc + weight, 0);
-	const values = steps.map((step) => ({
-		easing: step.easing ?? ((x) => x),
+	const weightSum = steps.reduce((acc, { weight }) => acc + weight, 0);
+	const stepsFormatted = steps.map((step) => ({
 		value: parseVector(step.value),
-		weight: step.weight ?? 1,
+		easing: step.easing ?? ((x) => x),
+		weight: step.weight,
 		to: 0,
-	})) as TimelineStepInternal[];
+	}));
 
-	values.reduce((acc, step, n) => {
-		return (values[n].to = acc + step.weight! / weight);
+	stepsFormatted.reduce((acc, step, n) => {
+		return (stepsFormatted[n].to = acc + step.weight / weightSum);
 	}, 0);
 
 	return (x: number) => {
-		if (x < 0) return from as LabVector;
-		if (x >= 1) return values[values.length - 1].value as LabVector;
+		if (x < 0) return parseVector(from);
+		if (x >= 1) return stepsFormatted[stepsFormatted.length - 1].value;
 
-		let start: TimelineStepInternal;
-		let end: TimelineStepInternal;
+		let start;
+		let end;
 
-		for (let n = 0; n < values.length; n++) {
-			if (values[n].to <= x && values[n + 1]?.to > x) {
-				start = values[n];
-				end = values[n + 1];
+		for (let n = 0; n < stepsFormatted.length; n++) {
+			if (stepsFormatted[n].to <= x && stepsFormatted[n + 1]?.to > x) {
+				start = stepsFormatted[n];
+				end = stepsFormatted[n + 1];
 				break;
 			}
 		}
 
-		start ??= { value: from as LabVector, to: 0 };
-		end ??= values[0];
+		start ??= { value: parseVector(from), to: 0 };
+		end ??= stepsFormatted[0];
 
-		return end.value
-			.clone()
-			.subtract(start.value)
-			.multiply(end.easing!((x - start.to) / (end.to - start.to)))
-			.add(start.value);
+		const result = end.value.clone();
+		result.subtract(start.value);
+		result.multiply(end.easing((x - start.to) / (end.to - start.to)));
+		result.add(start.value);
+		return result;
 	};
 }
 
