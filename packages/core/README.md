@@ -8,12 +8,6 @@ Utilties for working with the future `@kinematic-lab` packages and general trans
 
 <br />
 
-> [!WARNING]  
-> This packages were previously named `@kinematic-lab/utilities`, but have since been renamed to `@kinematic-lab/core`.<br />
-> The `@kinematic-lab/utilities` will still be available for some time, but we recommend making the switch as soon as possible.
-
-<br />
-
 ## Table of contents <!-- omit in toc -->
 
 -   [Relevant links](#relevant-links)
@@ -22,9 +16,6 @@ Utilties for working with the future `@kinematic-lab` packages and general trans
     -   [Using NPM](#using-npm)
     -   [Using Yarn](#using-yarn)
 -   [Modules](#modules)
-    -   [Lab.Clock](#labclock)
-    -   [Lab.CubicBezier](#labcubicbezier)
-    -   [Lab.Vector](#labvector)
 
 <br />
 
@@ -67,17 +58,10 @@ $ yarn add @kinematic-lab/core
 
 ## Modules
 
-### Lab.Clock
-
-See full documentation: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-clock.md).
-
-### Lab.CubicBezier
-
-See full documentation: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-cubic-bezier.md).
-
-### Lab.Vector
-
-See full documentation: [here](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/lab-vector.md).
+-   **Clock:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/clock.md).
+-   **CubicBezier:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/cubic-bezier.md).
+-   **Timeline:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/timeline.md).
+-   **Vector:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/core/docs/vector.md).
 
 <!-- Badges -->
 
