@@ -13,7 +13,7 @@ function CubicBezier(
 	y1: number,
 	options?: LabCubicBezierOptions
 ): LabShapingFunction {
-	const precision = options?.precision ?? 256;
+	const precision = options?.precision ?? 1024;
 	const maxIterations = options?.maxIterations ?? 32;
 	const maxErrorMargin = options?.maxErrorMargin ?? 1 / 10 ** 8;
 
@@ -49,6 +49,9 @@ function CubicBezier(
 	}
 
 	return (x: number) => {
+		if (x <= 0) return 0;
+		if (x >= 1) return 1;
+
 		const upper = Math.floor(x * precision);
 		const lower = Math.ceil(x * precision);
 

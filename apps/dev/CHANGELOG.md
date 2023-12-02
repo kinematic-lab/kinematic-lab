@@ -1,5 +1,13 @@
 # @kinematic-lab/dev
 
+## 0.0.3
+
+### Patch Changes
+
+-   Updated dependencies
+-   Updated dependencies
+    -   @kinematic-lab/core@0.2.2
+
 ## 0.0.2
 
 ### Patch Changes
