@@ -2,6 +2,7 @@ import { defineNuxtModule, addImportsDir, createResolver } from '@nuxt/kit';
 
 const autoImports = {
 	core: './runtime/core',
+	browser: './runtime/browser',
 	nuxt: './runtime/nuxt',
 };
 

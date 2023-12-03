@@ -1,5 +1,1 @@
-export {
-	spring,
-	Spring as useLabSpring,
-	SpringSet as useLabSpringSet,
-} from '@kinematic-lab/core';
+export { Spring as useLabSpring } from '@kinematic-lab/core';

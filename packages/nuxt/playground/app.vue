@@ -2,6 +2,8 @@
 	<div class="c-app">
 		<pre v-text="`Mouse Actual: \t\t${mouseTarget}`" />
 		<pre v-text="`Mouse Interpolated: \t${mouseActual}`" />
+		<pre v-text="`Mouse Spring X: \t${mouseSpringX.value}`" />
+		<pre v-text="`Mouse Spring Y: \t${mouseSpringY.value}`" />
 		<pre v-text="`Viewport: \t\t${viewport}`" />
 		<pre v-text="`Eased: \t\t\t${bezier(0.75)}`" />
 		<pre v-text="`Clock: \t\t\t${clock.getElapsedTime()}`" />
@@ -11,6 +13,13 @@
 			:style="{
 				'--mx': mouseActual.value[0],
 				'--my': mouseActual.value[1],
+			}"
+		/>
+		<div
+			id="spring-cursor"
+			:style="{
+				'--mx': mouseSpringX.value,
+				'--my': mouseSpringY.value,
 			}"
 		/>
 	</div>
@@ -25,6 +34,20 @@ const mouseActual = useLabVector(0, 0);
 const mouseTarget = useLabMouse([0.75, 0.75], true);
 const { start, stop } = onLabUpdate((delta) => {
 	mouseActual.interpolate(mouseTarget, delta * 0.0075);
+});
+
+const mouseSpringX = useLabAnimatedSpring({
+	value: mouseActual.value[0],
+});
+const mouseSpringY = useLabAnimatedSpring({
+	value: mouseActual.value[1],
+});
+useLabAnimatedSpringSet([mouseSpringX, mouseSpringY]).start();
+
+watch(mouseActual, () => {
+	const [x, y] = mouseActual.value;
+	mouseSpringX.targetValue = x;
+	mouseSpringY.targetValue = y;
 });
 
 onMounted(() => {
@@ -45,7 +68,8 @@ onMounted(() => {
 	border-radius: 4px;
 }
 
-#cursor {
+#cursor,
+#spring-cursor {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -60,5 +84,10 @@ onMounted(() => {
 		calc(-50% + var(--mx) * 100dvw),
 		calc(-50% + var(--my) * 100dvh)
 	);
+}
+
+#spring-cursor {
+	width: 64px;
+	height: 64px;
 }
 </style>
