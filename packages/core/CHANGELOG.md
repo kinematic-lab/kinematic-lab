@@ -1,5 +1,12 @@
 # @kinematic-lab/core
 
+## 0.2.2
+
+### Patch Changes
+
+-   `CubicBezier`: Added lower and upper limit on `x`, limiting it between >=0 and <=1.
+-   `CubicBezier`: Increased default precision to 1024, up from 256.
+
 ## 0.2.1
 
 ### Patch Changes
