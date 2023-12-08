@@ -19,6 +19,7 @@
 -   [Installation](#installation)
 -   [Composables](#composables)
     -   [General](#general)
+    -   [From @kinematic-lab/browser](#from-kinematic-labbrowser)
     -   [From @kinematic-lab/core](#from-kinematic-labcore)
 
 <br />
@@ -73,10 +74,15 @@ That's it! You can now use `@kinematic-lab/nuxt` in your Nuxt app ✨
 -   **useLabMouse:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-mouse.md).
 -   **useLabViewport:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/nuxt/use-lab-viewport.md).
 
+### From @kinematic-lab/browser
+
+-   **useLabAnimatedSpring and useLabAnimatedSpringSet:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/browser/use-lab-animated-spring.md).
+
 ### From @kinematic-lab/core
 
 -   **useLabClock:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-clock.md).
 -   **useLabCubicBezier:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-cubic-bezier.md).
+-   **useLabSpring:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-spring.md).
 -   **useLabVector:** [See documentation](https://github.com/kinematic-lab/kinematic-lab/tree/main/packages/nuxt/docs/core/use-lab-vector.md).
 
 <!-- Badges -->
