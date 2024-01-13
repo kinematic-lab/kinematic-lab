@@ -17,7 +17,7 @@
 		"skipLibCheck": true,
 		"strict": true,
 		"baseUrl": "..",
-		"lib": ["es2021", "dom"],
+		"lib": ["es2021"],
 		"paths": {
 			"~~": ["."],
 			"~~/*": ["./*"],
