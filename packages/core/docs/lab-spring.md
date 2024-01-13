@@ -24,9 +24,9 @@ Note that the documentation for this module is not complete and may lack some in
  * @param dampingRatio the damping ratio of the spring, 0 = no damping, 1 = critical damping, >1 = over-damping (a draggish experience)
  * @param oscillationsPerSecond the amount of full periods per second. The more oscillation per second the faster the spring will reach its target.
  * @param deltaMs the time step between each spring update
- * @returns a vector containing the new value and velocity of the spring
+ * @returns an array containing the new value and velocity of the spring
  */
-[value, velocity] = Spring(
+[value, velocity] = spring(
 	value,
 	velocity,
 	targetValue,
@@ -53,8 +53,8 @@ import * as Lab from '@kinematic-lab/core';
  * is aiding the function to keep track of the current
  * movement within the springing.
  */
-const x = 0;
-const xspd = 0;
+let x = 0;
+let xspd = 0;
 
 /**
  * The spring needs to spring towards a target value as
@@ -70,7 +70,7 @@ const targetX = 10;
  * interval.
  */
 setInterval(() => {
-	[x, xpsd] = Lab.Spring(x, xspd, targetX, 0.5, 1, 50).value;
+	[x, xpsd] = Lab.spring(x, xspd, targetX, 0.5, 1, 50);
 	console.log('Current value:', x);
 }, 50);
 ```

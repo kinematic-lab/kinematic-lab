@@ -1,4 +1,4 @@
-## `useLabVector` <!-- omit in toc -->
+## `labSpring` <!-- omit in toc -->
 
 Spring implementation inspired by approach to numeric springing by [Allen Chou](http://allenchou.net/2015/04/game-math-precise-control-over-numeric-springing/).<br />
 Note that the documentation for this module is not complete and may lack some information.<br />
@@ -24,9 +24,9 @@ const xpsd = ref(0);
 
 function springLoop() {
 	// Springing the value "x" towards the mouse position
-	const output = useLabSpring(x.value, xspd.value, mouse.value.[0], 0.5, 1, clock.getDelta());
-	x.value = output.value[0];
-	xspd.value = output.value[1];
+	const output = labSpring(x.value, xspd.value, mouse.value.[0], 0.5, 1, clock.getDelta());
+	x.value = output[0];
+	xspd.value = output[1];
 
 	requestAnimationFrame(springLoop);
 }

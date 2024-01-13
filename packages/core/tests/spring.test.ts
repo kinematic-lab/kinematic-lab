@@ -1,4 +1,4 @@
-import { Spring } from '../src/spring';
+import spring from '../src/spring';
 
 test('Lab.Spring: Spring function', () => {
 	const value = 0;
@@ -8,7 +8,7 @@ test('Lab.Spring: Spring function', () => {
 	const oscillationsPerSecond = 1;
 	const deltaMs = 100;
 
-	const result = Spring(
+	const result = spring(
 		value,
 		velocity,
 		targetValue,
@@ -17,6 +17,6 @@ test('Lab.Spring: Spring function', () => {
 		deltaMs
 	);
 
-	expect(result.value).toBeCloseTo(5);
-	expect(result.velocity).toBeCloseTo(0);
+	expect(result[0]).toBeCloseTo(5);
+	expect(result[1]).toBeCloseTo(0);
 });

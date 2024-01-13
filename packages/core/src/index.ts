@@ -1,7 +1,7 @@
 import CubicBezier from './cubic-bezier';
 import Clock from './clock';
 import Vector from './vector';
-import Spring from './spring';
+import spring from './spring';
 
-export { CubicBezier, Clock, Vector, Spring };
+export { CubicBezier, Clock, Vector, spring };
 export * from './types';

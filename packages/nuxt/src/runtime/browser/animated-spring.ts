@@ -1,5 +1,4 @@
-import type { LabVector } from '@kinematic-lab/core';
-import { Vector, Clock, Spring } from '@kinematic-lab/core';
+import { Clock, spring } from '@kinematic-lab/core';
 
 /* Types / interfaces */
 interface LabAnimatedSpring {
@@ -17,10 +16,10 @@ interface LabAnimatedSpring {
 	onStart?: () => void;
 	onStop?: () => void;
 	onUpdate?: (
-		output: LabVector,
-		input: LabVector,
+		output: Array<number>,
+		input: Array<number>,
 		delta: number
-	) => LabVector | undefined;
+	) => Array<number> | undefined;
 
 	// methods
 	readonly start: () => void;
@@ -43,10 +42,10 @@ type LabAnimatedSpringOptions = {
 	onStart: () => void;
 	onStop: () => void;
 	onUpdate: (
-		output: LabVector,
-		input: LabVector,
+		output: Array<number>,
+		input: Array<number>,
 		delta: number
-	) => LabVector | undefined;
+	) => Array<number> | undefined;
 };
 
 interface LabAnimatedSpringSet
@@ -125,7 +124,7 @@ class AnimatedSpring implements LabAnimatedSpring {
 			}
 
 			if (this.value !== this.targetValue || this.velocity !== 0) {
-				const output = Spring(
+				const output = spring(
 					this.value,
 					this.velocity,
 					this.targetValue,
@@ -133,18 +132,17 @@ class AnimatedSpring implements LabAnimatedSpring {
 					this.oscillationsPerSecond,
 					delta * this.timeScalar
 				);
-				[this.value, this.velocity] = output.value;
+				[this.value, this.velocity] = output;
 			}
 
 			if (options?.onUpdate) {
-				const output =
-					options.onUpdate(
-						Vector(this.value, this.velocity),
-						Vector(this.value, this.velocity),
-						delta
-					) ?? Vector(this.value, this.velocity);
+				const output = options.onUpdate(
+					[this.value, this.velocity],
+					[this.value, this.velocity],
+					delta
+				) ?? [this.value, this.velocity];
 
-				[this.value, this.velocity] = output.value;
+				[this.value, this.velocity] = output;
 			}
 
 			if (typeof window !== 'undefined') {
@@ -226,10 +224,10 @@ class AnimatedSpring implements LabAnimatedSpring {
 	onStart?: () => void;
 	onStop?: () => void;
 	onUpdate?: (
-		output: LabVector,
-		input: LabVector,
+		output: Array<number>,
+		input: Array<number>,
 		delta: number
-	) => LabVector | undefined;
+	) => Array<number> | undefined;
 
 	// Readonly
 	readonly start: () => void;
