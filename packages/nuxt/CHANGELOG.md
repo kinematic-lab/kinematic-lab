@@ -1,5 +1,13 @@
 # @kinematic-lab/nuxt
 
+## 0.2.1
+
+### Patch Changes
+
+-   Updated dependencies
+-   Updated dependencies
+    -   @kinematic-lab/core@0.2.2
+
 ## 0.2.0
 
 ### Minor Changes
