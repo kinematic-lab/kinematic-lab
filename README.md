@@ -39,12 +39,6 @@ And the following configuration packages (mainly for use internally):
 
 <br />
 
-## Contributing
-
-\-
-
-<br />
-
 ## Contributors
 
 \-
@@ -54,6 +48,7 @@ And the following configuration packages (mainly for use internally):
 ## Showcase
 
 -   [After August](https://afteraugust.org/).
+-   [Not to Scale](https://nottoscale.tv/).
 
 <br />
 
