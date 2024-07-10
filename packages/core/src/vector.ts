@@ -1,3 +1,5 @@
+import * as ParserUtils from './utils/parsers';
+import * as ArrayUtils from './utils/array';
 import type { LabVector } from './types';
 
 function Vector(...args: number[]): LabVector {
@@ -5,45 +7,36 @@ function Vector(...args: number[]): LabVector {
 		value: args,
 
 		add(v: LabVector | number[]): LabVector {
-			const source = parseSource(v);
-			this.value.forEach((value, index) => {
-				this.value[index] = value + source[index];
-			});
-
+			const source = ParserUtils.parseArray(v);
+			this.value = ArrayUtils.add(this.value, source);
 			return this;
 		},
 
 		subtract(v: LabVector | number[]): LabVector {
-			const source = parseSource(v);
-			this.value.forEach((value, index) => {
-				this.value[index] = value - source[index];
-			});
-
+			const source = ParserUtils.parseArray(v);
+			this.value = ArrayUtils.subtract(this.value, source);
 			return this;
 		},
 
-		multiply(v: LabVector | number[] | number): LabVector {
-			const source = typeof v !== 'number' ? parseSource(v) : v;
-			this.value.forEach((value, index) => {
-				this.value[index] =
-					value * (Array.isArray(source) ? source[index] : source);
-			});
-
+		multiply(v: LabVector | number[]): LabVector {
+			const source = ParserUtils.parseArray(v);
+			this.value = ArrayUtils.multiply(this.value, source);
 			return this;
 		},
 
-		divide(v: LabVector | number[] | number): LabVector {
-			const source = typeof v !== 'number' ? parseSource(v) : v;
-			this.value.forEach((value, index) => {
-				this.value[index] =
-					value / (Array.isArray(source) ? source[index] : source);
-			});
+		divide(v: LabVector | number[]): LabVector {
+			const source = ParserUtils.parseArray(v);
+			this.value = ArrayUtils.divide(this.value, source);
+			return this;
+		},
 
+		scale(scalar: number): LabVector {
+			this.value = ArrayUtils.scale(this.value, scalar);
 			return this;
 		},
 
 		interpolate(v: LabVector | number[], t: number): LabVector {
-			const source = parseSource(v);
+			const source = ParserUtils.parseArray(v);
 			const delta = Math.min(Math.max(t, 0), 1);
 
 			this.value.forEach((value, index) => {
