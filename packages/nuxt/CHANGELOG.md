@@ -1,5 +1,18 @@
 # @kinematic-lab/nuxt
 
+## 0.3.0
+
+### Minor Changes
+
+-   8c1fa63: Implemented `useLabTimeline` which uses `Timeline` from `@kinematic-lab/core`.
+
+### Patch Changes
+
+-   Updated dependencies [8c1fa63]
+-   Updated dependencies [8c1fa63]
+-   Updated dependencies [8c1fa63]
+    -   @kinematic-lab/core@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes
