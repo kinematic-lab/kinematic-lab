@@ -3,6 +3,6 @@ import type { LabVector } from './vector';
 
 export interface LabTimelineStep {
 	value: number | number[] | LabVector;
-	weight: number;
+	weight?: number;
 	easing?: LabShapingFunction;
 }
