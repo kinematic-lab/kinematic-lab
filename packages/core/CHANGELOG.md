@@ -1,5 +1,13 @@
 # @kinematic-lab/core
 
+## 0.3.0
+
+### Minor Changes
+
+-   8c1fa63: Vectors now support a `scale` functions, which allows the user to multiply a vector with a single number. So, fx. `Lab.Vector(0, 1, 2).scale(2)`.
+-   8c1fa63: Implemented `Timeline` module.
+-   8c1fa63: Restructured utilities, and disallowed single number arguments in `Vector` methods.
+
 ## 0.2.2
 
 ### Patch Changes
