@@ -9,6 +9,7 @@ export function parseVector(value: LabVector | number[] | number): LabVector {
 
 export function parseArray(value: LabVector | number[] | number): number[] {
 	if (typeof value === 'number') return [value];
-	if (value.hasOwnProperty?.('value')) return (value as LabVector).value;
+	if ({}.hasOwnProperty?.call(value, 'value'))
+		return (value as LabVector).value;
 	return value as number[];
 }
