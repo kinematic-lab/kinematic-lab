@@ -40,3 +40,10 @@ test('Lab.Vector: Cloning', () => {
 	expect(a.value).toStrictEqual([1, 2, 3]);
 	expect(b.value).toStrictEqual([2, 3, 4]);
 });
+
+test('Lab.Vector: Argument types', () => {
+	const vector = Vector(2, 3, 4);
+
+	expect(vector.clone().add([1, 2, 3]).value).toStrictEqual([3, 5, 7]);
+	expect(vector.clone().add(Vector(1, 2, 3)).value).toStrictEqual([3, 5, 7]);
+});
